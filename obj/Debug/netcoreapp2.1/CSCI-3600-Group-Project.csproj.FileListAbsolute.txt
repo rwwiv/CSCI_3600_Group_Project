@@ -42,6 +42,7 @@ C:\Users\willi\RiderProjects\CSCI-3600-Group-Project\bin\Debug\netcoreapp2.1\CSC
 C:\Users\willi\RiderProjects\CSCI-3600-Group-Project\bin\Debug\netcoreapp2.1\CSCI-3600-Group-Project.pdb
 C:\Users\willi\RiderProjects\CSCI-3600-Group-Project\bin\Debug\netcoreapp2.1\CSCI-3600-Group-Project.Views.dll
 C:\Users\willi\RiderProjects\CSCI-3600-Group-Project\bin\Debug\netcoreapp2.1\CSCI-3600-Group-Project.Views.pdb
+C:\Users\willi\RiderProjects\CSCI-3600-Group-Project\obj\Debug\netcoreapp2.1\CSCI-3600-Group-Project.csprojAssemblyReference.cache
 C:\Users\willi\RiderProjects\CSCI-3600-Group-Project\obj\Debug\netcoreapp2.1\CSCI-3600-Group-Project.csproj.CoreCompileInputs.cache
 C:\Users\willi\RiderProjects\CSCI-3600-Group-Project\obj\Debug\netcoreapp2.1\CSCI-3600-Group-Project.RazorAssemblyInfo.cache
 C:\Users\willi\RiderProjects\CSCI-3600-Group-Project\obj\Debug\netcoreapp2.1\CSCI-3600-Group-Project.RazorAssemblyInfo.cs
