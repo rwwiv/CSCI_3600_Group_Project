@@ -6,15 +6,16 @@
              top width="100%" 
              src="https://via.placeholder.com/1200x600" 
              alt="Card image cap"/>
-        <a href="#filePlaceholder"><span class="fas fa-info-circle"></span></a>
-        <div class="card-body">
-            <h5 class="card-title">
-                <span class="fas fa-{@Model.FileType}"></span>
-                @Model.Name
-            </h5>
-            <p class="card-text"><small class="text-muted">
-                Last edited by: @Model.LastModifiedBy
-            </small></p>
-        </div>
+        <i class="fas fa-info-circle"><a href="#"></a></i>
+        @* <a href="#filePlaceholder"><i class="fas fa-info-circle"></i></a> *@
+    </div>
+    <div class="card-body">
+        <h5 class="card-title">
+            <span class="fas fa-@Model.FontAwesomeFileType"></span>
+            @Model.Name
+        </h5>
+        <p class="card-text"><small class="text-muted">
+            Last edited by: @Model.Owner
+        </small></p>
     </div>
 </div>

@@ -1,7 +1,7 @@
 ﻿#card-img {
     position: relative;
 }
-#card-img svg {
+#card-img .fa-info-circle {
     color: white;
     position: absolute;
     top: 0.5rem;
@@ -54,6 +54,9 @@ body>.navbar {
     flex-grow: 1;
     justify-content: center;
     align-items: center;
+}
+.fileText{
+    padding-top: 1.1rem !important;
 }
 /*
 #loginCard .form-group {
