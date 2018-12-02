@@ -6,10 +6,6 @@
       <change afterPath="$PROJECT_DIR$/files/william.wernert@gmail.com/NewFile2.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.CSCI_3600_Group_Project/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.CSCI_3600_Group_Project/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Controllers/HomeController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Controllers/HomeController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Models/FileModel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Models/FileModel.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Startup.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Startup.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Views/Shared/_QuickAccessCard.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/Views/Shared/_QuickAccessCard.cshtml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -32,7 +28,7 @@
         <entry file="file://$PROJECT_DIR$/.gitignore">
           <provider selected="true" editor-type-id="text-editor">
             <state>
-              <caret column="8" selection-start-column="8" selection-end-column="8" />
+              <caret column="7" selection-start-column="7" selection-end-column="7" />
             </state>
           </provider>
         </entry>
@@ -323,12 +319,12 @@
       <workItem from="1543697192284" duration="15008000" />
       <workItem from="1543794120043" duration="6413000" />
       <workItem from="1543783260910" duration="64000" />
-      <workItem from="1543783358357" duration="4069000" />
+      <workItem from="1543783358357" duration="4273000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="26204000" />
+    <option name="totallyTimeSpent" value="26408000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -680,7 +676,7 @@
     <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
         <state>
-          <caret column="8" selection-start-column="8" selection-end-column="8" />
+          <caret column="7" selection-start-column="7" selection-end-column="7" />
         </state>
       </provider>
     </entry>
