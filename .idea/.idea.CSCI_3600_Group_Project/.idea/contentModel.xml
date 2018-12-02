@@ -103,7 +103,7 @@
         <e p=".gitignore" t="Include" />
         <e p="william.wernert@gmail.com" t="Include">
           <e p="NewFile1.txt" t="Include" />
-          <e p="NewFile2.txt" t="Include" />
+          <e p="test.docx" t="Include" />
         </e>
       </e>
       <e p="gulpfile.js" t="Include" />
