@@ -49,6 +49,7 @@ namespace CSCI_3600_Group_Project.Controllers
                 outputFileList[i].Name = file.Name;
                 outputFileList[i].Size = file.Length;
                 outputFileList[i].FileType = file.Extension;
+                outputFileList[i].FontAwesomeFileType = file.Extension;
                 outputFileList[i].LastModified = file.LastWriteTimeUtc;
                 outputFileList[i].Owner = User.Identity.Name;
                 i++;

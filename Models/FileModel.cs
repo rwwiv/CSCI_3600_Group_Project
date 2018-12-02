@@ -8,36 +8,52 @@ namespace CSCI_3600_Group_Project.Models
 {
     public class FileModel
     {
-        private readonly string[] _picture =
-        {
-            ".PNG", ".JPG", ".JPEG", ".BMP", ".GIF"
-        };
-
-        private readonly string[] _audio =
-        {
-            ".WAV", ".MID", ".MIDI", ".WMA", ".MP3", ".OGG", ".RMA"
-        };
-
-        private readonly string[] _video =
-        {
-            ".AVI", ".MP4", ".DIVX", ".WMV"
-        };
-
+        private readonly string[] _picture = { ".PNG", ".JPG", ".JPEG", ".BMP", ".GIF"};
+        private readonly string[] _audio = { ".WAV", ".MID", ".MIDI", ".WMA", ".MP3", ".OGG", ".RMA" };
+        private readonly string[] _video = { ".AVI", ".MP4", ".DIVX", ".WMV" };
+        private readonly string[] _doc = {".DOC",".DOCX",".ODT"};
+        private readonly string[] _spreadsheet = {".XLS","XLSX",".ODS"};
+        private readonly string[] _powerpoint = {".PPT", ".PPTX", ".ODP"};
+        private string _fontAwesomeFileType;
         public FileModel()
         {
         }
         public string FontAwesomeFileType
         {
-            get { return this.FontAwesomeFileType; }
+            get => _fontAwesomeFileType;
             set
             {
                 if (_picture.Contains(value.ToUpper()))
                 {
-                    this.FontAwesomeFileType = "file-image";
+                    _fontAwesomeFileType = "file-image";
                 }
                 else if (_audio.Contains(value.ToUpper()))
                 {
-                    this.FontAwesomeFileType = "file-audio";
+                    _fontAwesomeFileType = "file-audio";
+                }
+                else if (_video.Contains(value.ToUpper()))
+                {
+                    _fontAwesomeFileType = "file-video";
+                }
+                else if (_doc.Contains(value.ToUpper()))
+                {
+                    _fontAwesomeFileType = "file-word";
+                }
+                else if (_spreadsheet.Contains(value.ToUpper()))
+                {
+                    _fontAwesomeFileType = "file-excel";
+                }
+                else if (_powerpoint.Contains(value.ToUpper()))
+                {
+                    _fontAwesomeFileType = "file-powerpoint";
+                }
+                else if (value.Equals(".txt"))
+                {
+                    _fontAwesomeFileType = "file-alt";
+                }
+                else
+                {
+                    _fontAwesomeFileType = "file";
                 }
             }
             

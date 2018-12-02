@@ -1,10 +1,17 @@
 @model FileModel
 
+@{
+    var fileSize = Model.Size / 1024;
+}
+
 <tr>
-    <td>
-        <span class="fas fa-{@Model.FileType}"></span>&emsp;@Model.Name
+    <td class="fileText">
+        <i class="fas fa-@Model.FontAwesomeFileType"></i>&emsp;@Model.Name
     </td>
-    <td>@Model.Owner</td>
-    <td>@Model.LastModified</td>
-    <td>@Model.Size</td>
+    <td class="fileText">@Model.Owner</td>
+    <td class="fileText">@Model.LastModified</td>
+    <td class="fileText">@fileSize KB</td>
+    <td>
+        <button class="btn btn-secondary">Delete</button>
+    </td>
 </tr>

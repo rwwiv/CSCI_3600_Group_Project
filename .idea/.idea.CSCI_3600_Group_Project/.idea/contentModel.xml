@@ -6,6 +6,7 @@
     <e p="C:\Users\willi\.Rider2018.3\system\extResources" t="IncludeRecursive" />
     <e p="C:\Users\willi\.Rider2018.3\system\resharper-host\local\Transient\ReSharperHost\v183\SolutionCaches\_CSCI_3600_Group_Project.-1950567898.00" t="ExcludeRecursive" />
     <e p="C:\Users\willi\source\repos\CSCI_3600_Group_Project" t="IncludeRecursive">
+      <e p=".gitignore" t="Include" />
       <e p="app.db" t="Include" />
       <e p="appsettings.Development.json" t="Include" />
       <e p="appsettings.json" t="Include" />
