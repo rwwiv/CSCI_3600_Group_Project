@@ -2,54 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5f34af58-49a3-4635-ae1d-4a0a01cf51e4" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.CSCI_3600_Group_Project/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.CSCI_3600_Group_Project/.idea/contentModel.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/files/william.wernert@gmail.com/NewFile1.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/files/william.wernert@gmail.com/NewFile2.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.CSCI_3600_Group_Project/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.CSCI_3600_Group_Project/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Controllers/HomeController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Controllers/HomeController.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Models/FileModel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Models/FileModel.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Startup.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Startup.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Views/Home/UserHome.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/Views/Home/UserHome.cshtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Views/Shared/_FileListItem.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/Views/Shared/_FileListItem.cshtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Views/Shared/_Layout.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/Views/Shared/_Layout.cshtml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Views/Shared/_QuickAccessCard.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/Views/Shared/_QuickAccessCard.cshtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/Debug/netcoreapp2.1/CSCI_3600_Group_Project.Views.dll" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Debug/netcoreapp2.1/CSCI_3600_Group_Project.Views.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/Debug/netcoreapp2.1/CSCI_3600_Group_Project.Views.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Debug/netcoreapp2.1/CSCI_3600_Group_Project.Views.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/Debug/netcoreapp2.1/CSCI_3600_Group_Project.dll" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Debug/netcoreapp2.1/CSCI_3600_Group_Project.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/Debug/netcoreapp2.1/CSCI_3600_Group_Project.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Debug/netcoreapp2.1/CSCI_3600_Group_Project.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/obj/Debug/netcoreapp2.1/CSCI_3600_Group_Project.Views.dll" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/netcoreapp2.1/CSCI_3600_Group_Project.Views.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/obj/Debug/netcoreapp2.1/CSCI_3600_Group_Project.Views.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/netcoreapp2.1/CSCI_3600_Group_Project.Views.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/obj/Debug/netcoreapp2.1/CSCI_3600_Group_Project.dll" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/netcoreapp2.1/CSCI_3600_Group_Project.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/obj/Debug/netcoreapp2.1/CSCI_3600_Group_Project.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/netcoreapp2.1/CSCI_3600_Group_Project.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/obj/Debug/netcoreapp2.1/Razor/Areas/Identity/Pages/Account/ExternalLogin.g.cshtml.cs" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/netcoreapp2.1/Razor/Areas/Identity/Pages/Account/ExternalLogin.g.cshtml.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/obj/Debug/netcoreapp2.1/Razor/Areas/Identity/Pages/Account/ForgotPassword.g.cshtml.cs" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/netcoreapp2.1/Razor/Areas/Identity/Pages/Account/ForgotPassword.g.cshtml.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/obj/Debug/netcoreapp2.1/Razor/Areas/Identity/Pages/Account/Login.g.cshtml.cs" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/netcoreapp2.1/Razor/Areas/Identity/Pages/Account/Login.g.cshtml.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/obj/Debug/netcoreapp2.1/Razor/Areas/Identity/Pages/Account/LoginWith2fa.g.cshtml.cs" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/netcoreapp2.1/Razor/Areas/Identity/Pages/Account/LoginWith2fa.g.cshtml.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/obj/Debug/netcoreapp2.1/Razor/Areas/Identity/Pages/Account/LoginWithRecoveryCode.g.cshtml.cs" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/netcoreapp2.1/Razor/Areas/Identity/Pages/Account/LoginWithRecoveryCode.g.cshtml.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/obj/Debug/netcoreapp2.1/Razor/Areas/Identity/Pages/Account/Manage/ChangePassword.g.cshtml.cs" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/netcoreapp2.1/Razor/Areas/Identity/Pages/Account/Manage/ChangePassword.g.cshtml.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/obj/Debug/netcoreapp2.1/Razor/Areas/Identity/Pages/Account/Manage/DeletePersonalData.g.cshtml.cs" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/netcoreapp2.1/Razor/Areas/Identity/Pages/Account/Manage/DeletePersonalData.g.cshtml.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/obj/Debug/netcoreapp2.1/Razor/Areas/Identity/Pages/Account/Manage/Disable2fa.g.cshtml.cs" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/netcoreapp2.1/Razor/Areas/Identity/Pages/Account/Manage/Disable2fa.g.cshtml.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/obj/Debug/netcoreapp2.1/Razor/Areas/Identity/Pages/Account/Manage/DownloadPersonalData.g.cshtml.cs" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/netcoreapp2.1/Razor/Areas/Identity/Pages/Account/Manage/DownloadPersonalData.g.cshtml.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/obj/Debug/netcoreapp2.1/Razor/Areas/Identity/Pages/Account/Manage/EnableAuthenticator.g.cshtml.cs" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/netcoreapp2.1/Razor/Areas/Identity/Pages/Account/Manage/EnableAuthenticator.g.cshtml.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/obj/Debug/netcoreapp2.1/Razor/Areas/Identity/Pages/Account/Manage/ExternalLogins.g.cshtml.cs" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/netcoreapp2.1/Razor/Areas/Identity/Pages/Account/Manage/ExternalLogins.g.cshtml.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/obj/Debug/netcoreapp2.1/Razor/Areas/Identity/Pages/Account/Manage/GenerateRecoveryCodes.g.cshtml.cs" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/netcoreapp2.1/Razor/Areas/Identity/Pages/Account/Manage/GenerateRecoveryCodes.g.cshtml.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/obj/Debug/netcoreapp2.1/Razor/Areas/Identity/Pages/Account/Manage/Index.g.cshtml.cs" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/netcoreapp2.1/Razor/Areas/Identity/Pages/Account/Manage/Index.g.cshtml.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/obj/Debug/netcoreapp2.1/Razor/Areas/Identity/Pages/Account/Manage/PersonalData.g.cshtml.cs" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/netcoreapp2.1/Razor/Areas/Identity/Pages/Account/Manage/PersonalData.g.cshtml.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/obj/Debug/netcoreapp2.1/Razor/Areas/Identity/Pages/Account/Manage/ResetAuthenticator.g.cshtml.cs" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/netcoreapp2.1/Razor/Areas/Identity/Pages/Account/Manage/ResetAuthenticator.g.cshtml.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/obj/Debug/netcoreapp2.1/Razor/Areas/Identity/Pages/Account/Manage/SetPassword.g.cshtml.cs" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/netcoreapp2.1/Razor/Areas/Identity/Pages/Account/Manage/SetPassword.g.cshtml.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/obj/Debug/netcoreapp2.1/Razor/Areas/Identity/Pages/Account/Manage/TwoFactorAuthentication.g.cshtml.cs" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/netcoreapp2.1/Razor/Areas/Identity/Pages/Account/Manage/TwoFactorAuthentication.g.cshtml.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/obj/Debug/netcoreapp2.1/Razor/Areas/Identity/Pages/Account/Manage/_Layout.g.cshtml.cs" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/netcoreapp2.1/Razor/Areas/Identity/Pages/Account/Manage/_Layout.g.cshtml.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/obj/Debug/netcoreapp2.1/Razor/Areas/Identity/Pages/Account/Manage/_ManageNav.g.cshtml.cs" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/netcoreapp2.1/Razor/Areas/Identity/Pages/Account/Manage/_ManageNav.g.cshtml.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/obj/Debug/netcoreapp2.1/Razor/Areas/Identity/Pages/Account/Register.g.cshtml.cs" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/netcoreapp2.1/Razor/Areas/Identity/Pages/Account/Register.g.cshtml.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/obj/Debug/netcoreapp2.1/Razor/Areas/Identity/Pages/Account/ResetPassword.g.cshtml.cs" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/netcoreapp2.1/Razor/Areas/Identity/Pages/Account/ResetPassword.g.cshtml.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/obj/Debug/netcoreapp2.1/Razor/Areas/Identity/Pages/Account/ResetPasswordConfirmation.g.cshtml.cs" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/netcoreapp2.1/Razor/Areas/Identity/Pages/Account/ResetPasswordConfirmation.g.cshtml.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/obj/Debug/netcoreapp2.1/Razor/Areas/Identity/Pages/_ValidationScriptsPartial.g.cshtml.cs" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/netcoreapp2.1/Razor/Areas/Identity/Pages/_ValidationScriptsPartial.g.cshtml.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/obj/Debug/netcoreapp2.1/Razor/Views/Home/UserHome.g.cshtml.cs" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/netcoreapp2.1/Razor/Views/Home/UserHome.g.cshtml.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/obj/Debug/netcoreapp2.1/Razor/Views/Shared/_CookieConsentPartial.g.cshtml.cs" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/netcoreapp2.1/Razor/Views/Shared/_CookieConsentPartial.g.cshtml.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/obj/Debug/netcoreapp2.1/Razor/Views/Shared/_FileListItem.g.cshtml.cs" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/netcoreapp2.1/Razor/Views/Shared/_FileListItem.g.cshtml.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/obj/Debug/netcoreapp2.1/Razor/Views/Shared/_Layout.g.cshtml.cs" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/netcoreapp2.1/Razor/Views/Shared/_Layout.g.cshtml.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/obj/Debug/netcoreapp2.1/Razor/Views/Shared/_LoginPartial.g.cshtml.cs" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/netcoreapp2.1/Razor/Views/Shared/_LoginPartial.g.cshtml.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/obj/Debug/netcoreapp2.1/Razor/Views/Shared/_QuickAccessCard.g.cshtml.cs" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/netcoreapp2.1/Razor/Views/Shared/_QuickAccessCard.g.cshtml.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/obj/Debug/netcoreapp2.1/Razor/Views/Shared/_ValidationScriptsPartial.g.cshtml.cs" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/netcoreapp2.1/Razor/Views/Shared/_ValidationScriptsPartial.g.cshtml.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wwwroot/css/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/wwwroot/css/index.css" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -59,11 +19,20 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Views/Shared/_Layout.cshtml">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="169">
               <caret line="53" column="26" selection-start-line="53" selection-start-column="26" selection-end-line="53" selection-end-column="26" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/.gitignore">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <caret column="8" selection-start-column="8" selection-end-column="8" />
             </state>
           </provider>
         </entry>
@@ -100,15 +69,6 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="421">
               <caret line="85" selection-start-line="85" selection-end-line="85" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/files/william.wernert@gmail.com/NewFile1.txt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="421">
-              <caret line="47" column="6" selection-start-line="47" selection-start-column="6" selection-end-line="47" selection-end-column="6" />
             </state>
           </provider>
         </entry>
@@ -234,6 +194,7 @@
         <option value="$PROJECT_DIR$/Views/Shared/_FileListItem.cshtml" />
         <option value="$PROJECT_DIR$/wwwroot/css/index.css" />
         <option value="$PROJECT_DIR$/Views/Shared/_Layout.cshtml" />
+        <option value="$PROJECT_DIR$/.gitignore" />
       </list>
     </option>
   </component>
@@ -362,12 +323,12 @@
       <workItem from="1543697192284" duration="15008000" />
       <workItem from="1543794120043" duration="6413000" />
       <workItem from="1543783260910" duration="64000" />
-      <workItem from="1543783358357" duration="3647000" />
+      <workItem from="1543783358357" duration="4069000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="25782000" />
+    <option name="totallyTimeSpent" value="26204000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -713,6 +674,13 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="169">
           <caret line="53" column="26" selection-start-line="53" selection-start-column="26" selection-end-line="53" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="8" selection-start-column="8" selection-end-column="8" />
         </state>
       </provider>
     </entry>
