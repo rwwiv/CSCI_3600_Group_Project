@@ -1,0 +1,20 @@
+@model FileModel
+
+<div class="card">
+    <div id="card-img">
+        <img class="card-img"
+             top width="100%" 
+             src="https://via.placeholder.com/1200x600" 
+             alt="Card image cap"/>
+        <a href="#filePlaceholder"><span class="fas fa-info-circle"></span></a>
+        <div class="card-body">
+            <h5 class="card-title">
+                <span class="fas fa-{@Model.FileType}"></span>
+                @Model.Name
+            </h5>
+            <p class="card-text"><small class="text-muted">
+                Last edited by: @Model.LastModifiedBy
+            </small></p>
+        </div>
+    </div>
+</div>

@@ -61,7 +61,7 @@ namespace CSCI_3600_Group_Project
                 options.ExpireTimeSpan = TimeSpan.FromMinutes(5);
 
                 options.LoginPath = "/Identity/Account/Login";
-                options.AccessDeniedPath = "Identity/Account/AccessDenied";
+                options.AccessDeniedPath = "/Identity/Account/AccessDenied";
                 options.SlidingExpiration = true;
             });
 

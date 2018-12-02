@@ -100,6 +100,7 @@
       <e p="gulpfile.js" t="Include" />
       <e p="Models" t="Include">
         <e p="ErrorViewModel.cs" t="Include" />
+        <e p="FileModel.cs" t="Include" />
       </e>
       <e p="node_modules" t="ExcludeRecursive">
         <e p="bootstrap" t="IncludeRecursive" />
@@ -131,19 +132,24 @@
         <e p="Home" t="Include">
           <e p="About.cshtml" t="Include" />
           <e p="Contact.cshtml" t="Include" />
+          <e p="Home.cshtml" t="Include" />
+          <e p="Home.cshtml.cs" t="Include" />
           <e p="Index.cshtml" t="Include" />
           <e p="Privacy.cshtml" t="Include" />
         </e>
         <e p="Shared" t="Include">
           <e p="_CookieConsentPartial.cshtml" t="Include" />
+          <e p="_FileListItem.cshtml" t="Include" />
           <e p="_Layout.cshtml" t="Include" />
           <e p="_LoginPartial.cshtml" t="Include" />
+          <e p="_QuickAccessCard.cshtml" t="Include" />
           <e p="_ValidationScriptsPartial.cshtml" t="Include" />
           <e p="Error.cshtml" t="Include" />
         </e>
       </e>
       <e p="wwwroot" t="Include">
         <e p="css" t="Include">
+          <e p="all.css" t="Include" />
           <e p="index.css" t="Include" />
           <e p="site.css" t="Include" />
           <e p="site.min.css" t="Include" />

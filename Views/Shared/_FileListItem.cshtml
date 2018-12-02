@@ -1,0 +1,10 @@
+@model FileModel
+
+<tr>
+    <td>
+        <span class="fas fa-{@Model.FileType}"></span>&emsp;@Model.Name
+    </td>
+    <td>@Model.Owner</td>
+    <td>@Model.LastModified</td>
+    <td>@Model.Size</td>
+</tr>
