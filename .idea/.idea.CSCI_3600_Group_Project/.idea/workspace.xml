@@ -2,8 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5f34af58-49a3-4635-ae1d-4a0a01cf51e4" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/files/william.wernert@gmail.com/NewFile1.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/files/william.wernert@gmail.com/NewFile2.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/files/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.CSCI_3600_Group_Project/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.CSCI_3600_Group_Project/.idea/workspace.xml" afterDir="false" />
     </list>
@@ -26,9 +25,14 @@
       </file>
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/.gitignore">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/files/.gitignore">
           <provider selected="true" editor-type-id="text-editor">
             <state>
-              <caret column="7" selection-start-column="7" selection-end-column="7" />
+              <caret column="1" selection-start-column="1" selection-end-column="1" />
             </state>
           </provider>
         </entry>
@@ -47,15 +51,6 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="1">
               <caret line="43" column="13" selection-start-line="43" selection-start-column="13" selection-end-line="43" selection-end-column="13" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Models/FileModel.cs">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-61">
-              <caret line="55" column="44" selection-start-line="55" selection-start-column="44" selection-end-line="55" selection-end-column="44" />
             </state>
           </provider>
         </entry>
@@ -190,6 +185,7 @@
         <option value="$PROJECT_DIR$/Views/Shared/_FileListItem.cshtml" />
         <option value="$PROJECT_DIR$/wwwroot/css/index.css" />
         <option value="$PROJECT_DIR$/Views/Shared/_Layout.cshtml" />
+        <option value="$PROJECT_DIR$/files/.gitignore" />
         <option value="$PROJECT_DIR$/.gitignore" />
       </list>
     </option>
@@ -319,12 +315,12 @@
       <workItem from="1543697192284" duration="15008000" />
       <workItem from="1543794120043" duration="6413000" />
       <workItem from="1543783260910" duration="64000" />
-      <workItem from="1543783358357" duration="4273000" />
+      <workItem from="1543783358357" duration="4377000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="26408000" />
+    <option name="totallyTimeSpent" value="26512000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -673,12 +669,15 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/.gitignore">
+    <entry file="file://$PROJECT_DIR$/files/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
         <state>
-          <caret column="7" selection-start-column="7" selection-end-column="7" />
+          <caret column="1" selection-start-column="1" selection-end-column="1" />
         </state>
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
   </component>
 </project>
