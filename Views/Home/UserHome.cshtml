@@ -50,21 +50,48 @@
         </table>
     </div>
 </div>
-<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
-<script>
-    $('#inputGroupFile01').on('change', function () {
-        console.log($(this));
-        if ($(this)[0].files.length > 1) {
-            $(this).next('.custom-file-label').html($(this)[0].files.length + " files selected.");
-        }
-        else {
-            var fileName = $(this).val();
-            
-            $(this).next('.custom-file-label').html(fileName);
-        }
-        
-    })
-</script>
 
-<script src="~/js/file.js"></script>
+@section Scripts {
+    <script type="text/javascript">
+        $('#inputGroupFile01').on('change', function () {
+            console.log($(this));
+            if ($(this)[0].files.length > 1) {
+                $(this).next('.custom-file-label').html($(this)[0].files.length + " files selected.");
+            }
+            else {
+                var fileName = $(this).val();
+
+                $(this).next('.custom-file-label').html(fileName);
+            }
+
+        })
+    </script>
+
+    <script type="text/javascript">
+        jQuery(document).ready(function ($) {
+            $(".clickable-file")
+                .click(function (e) {
+                    window.location = $(this).data("href");
+                })
+                .hover(
+                    function () {
+                        $(this).css({
+                            'color': 'gray',
+                            'cursor': 'pointer'
+                        });
+                    },
+                    function () {
+                        $(this).removeAttr('style');
+                    });
+            $('.delete').click(function (e) {
+                e.stopPropagation();
+            });
+            $('.file-card-info').click(function (e) {
+                e.stopPropagation();
+            });
+        });
+    </script>
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+    <script src="~/js/file.js"></script>
+}
 
