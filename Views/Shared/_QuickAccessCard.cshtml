@@ -1,5 +1,5 @@
 @model FileModel
-
+@{var address = "/Home/download/?fileDir=" + Model.Owner + "\\" + Model.Name;}
 <div class="card">
     <div id="card-img">
         <img class="card-img"
@@ -12,7 +12,7 @@
     <div class="card-body">
         <h5 class="card-title">
             <span class="fas fa-@Model.FontAwesomeFileType"></span>
-            @Model.Name
+            <a href=@address>@Model.Name</a>
         </h5>
         <p class="card-text"><small class="text-muted">
             Last edited by: @Model.Owner
