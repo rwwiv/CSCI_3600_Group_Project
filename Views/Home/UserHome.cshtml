@@ -7,23 +7,23 @@
     <div class="row align-items-center justify-content-end" style="margin-top: 1rem">
         <div class="col-xs-4 flex-row justify-content-end">
             <div class="input-group">
-                <input disabled placeholder="  Select files to upload"/>
+                <input disabled placeholder="  Select files to upload" />
                 <div class="input-group-append">
                     <label class="btn btn-outline-dark"
                            style="margin-bottom: 0">
                         <span class="fas fa-plus"></span>&emsp;Upload
-                        <input type="file" style="display: none" multiple/>
+                        <input type="file" style="display: none" multiple />
                     </label>
                 </div>
             </div>
         </div>
     </div>
-    <hr/>
+    <hr />
     <div class="row">
         @for (var i = 0; i < Math.Min(5, Model.Count); i++)
         {
             <div class="col">
-                <partial name="_QuickAccessCard" model="@Model[i]"/>
+                <partial name="_QuickAccessCard" model="@Model[i]" />
             </div>
         }
         @for (var i = 0; i < (5 - Model.Count); i++)
@@ -34,19 +34,19 @@
     <div style="margin-top: 1rem">
         <table class="table">
             <thead>
-            <tr>
-                <th>Name</th>
-                <th>Owner</th>
-                <th>Last Modified</th>
-                <th>Size</th>
-                <th></th>
-            </tr>
+                <tr>
+                    <th>Name</th>
+                    <th>Owner</th>
+                    <th>Last Modified</th>
+                    <th>Size</th>
+                    <th></th>
+                </tr>
             </thead>
             <tbody>
-            @foreach (FileModel fm in Model)
-            {
-                <partial name="_FileListItem" model="@fm"/>
-            }
+                @foreach (FileModel fm in Model)
+                {
+                    <partial name="_FileListItem" model="@fm" />
+                }
             </tbody>
         </table>
     </div>
@@ -69,7 +69,7 @@
                     function() {
                         $(this).removeAttr('style');
                     });
-            $('.delete-button').click(function(e) {
+            $('.delete').click(function(e) {
                 e.stopPropagation();
             });
             $('.file-card-info').click(function(e) {
@@ -77,4 +77,6 @@
             });
         });
     </script>
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+    <script src="~/js/file.js"></script>
 }
