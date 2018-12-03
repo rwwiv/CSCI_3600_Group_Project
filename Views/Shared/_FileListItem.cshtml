@@ -1,18 +1,18 @@
 @model FileModel
-@{var address = "/Home/download/?fileDir=" + Model.Owner + "\\" + Model.Name;}
 
 @{
     var fileSize = Model.Size / 1024;
+    var address = "/Home/download/?fileDir=" + Model.Owner + "//" + Model.Name;
 }
 
-<tr>
-    <td class="fileText">
-        <i class="fas fa-@Model.FontAwesomeFileType"></i>&emsp;<a href=@address>@Model.Name</a>
+<tr class="clickable-file" data-href=@address>
+    <td class="file-text">
+        <i class="fas fa-@Model.FontAwesomeFileType"></i>&emsp;@Model.Name
     </td>
-    <td class="fileText">@Model.Owner</td>
-    <td class="fileText">@Model.LastModified</td>
-    <td class="fileText">@fileSize KB</td>
+    <td class="file-text">@Model.Owner</td>
+    <td class="file-text">@Model.LastModified</td>
+    <td class="file-text">@fileSize KB</td>
     <td>
-        <button class="btn btn-secondary">Delete</button>
+        <button class="btn btn-secondary delete-button">Delete</button>
     </td>
 </tr>

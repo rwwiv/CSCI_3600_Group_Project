@@ -1,18 +1,18 @@
 @model FileModel
-@{var address = "/Home/download/?fileDir=" + Model.Owner + "\\" + Model.Name;}
-<div class="card">
+@{var address = "/Home/download/?fileDir=" + Model.Owner + "//" + Model.Name;}
+<div class="card clickable-file" data-href=@address>
     <div id="card-img">
         <img class="card-img"
              top width="100%" 
              src="https://via.placeholder.com/1200x600" 
              alt="Card image cap"/>
-        <i class="fas fa-info-circle"><a href="#"></a></i>
+        <i class="fas fa-info-circle file-card-info"><a href="#"></a></i>
         @* <a href="#filePlaceholder"><i class="fas fa-info-circle"></i></a> *@
     </div>
     <div class="card-body">
         <h5 class="card-title">
             <span class="fas fa-@Model.FontAwesomeFileType"></span>
-            <a href=@address>@Model.Name</a>
+            @Model.Name
         </h5>
         <p class="card-text"><small class="text-muted">
             Last edited by: @Model.Owner
