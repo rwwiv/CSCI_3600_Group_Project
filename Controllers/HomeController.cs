@@ -65,7 +65,7 @@ namespace CSCI_3600_Group_Project.Controllers
 
             var cd = new System.Net.Mime.ContentDisposition
             {
-                FileName = filename,
+                FileName = filepath,
                 Inline = false,
             };
             Response.Headers.Add("Content-Disposition", cd.ToString());
