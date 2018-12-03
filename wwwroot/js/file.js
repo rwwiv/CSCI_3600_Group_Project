@@ -56,6 +56,29 @@ $('.delete').on("click", function (event) {
     event.stopPropagation();
 });
 */
+
+jQuery(document).ready(function($) {
+    $(".clickable-file")
+        .click(function(e) {
+            window.location = $(this).data("href");
+        })
+        .hover(
+            function() {
+                $(this).css({
+                    'color': 'gray',
+                    'cursor': 'pointer'
+                });
+            },
+            function() {
+                $(this).removeAttr('style');
+            });
+    $('.delete').click(function(e) {
+        e.stopPropagation();
+    });
+    $('.file-card-info').click(function(e) {
+        e.stopPropagation();
+    });
+});
 function deleteLoad(fileloc) {
     $.ajax({
         type: "GET",

@@ -58,10 +58,8 @@ namespace CSCI_3600_Group_Project.Controllers
         [Route("Home/download")]
         public ActionResult DownloadFile(string fileDir)
         {
-            string filename = Path.Combine(Directory.GetCurrentDirectory(),
+            string filepath = Path.Combine(Directory.GetCurrentDirectory(),
                                     "files", fileDir);
-            string filepath = AppDomain.CurrentDomain.BaseDirectory + filename;
-            filepath = filename;
             byte[] filedata = System.IO.File.ReadAllBytes(filepath);
             string contentType = Type(filepath);
 
@@ -79,11 +77,10 @@ namespace CSCI_3600_Group_Project.Controllers
         [Route("Home/delete")]
         public HttpResponseMessage DeleteFile(string fileDir)
         {
-            string filename = Path.Combine(Directory.GetCurrentDirectory(),
+            string filepath = Path.Combine(Directory.GetCurrentDirectory(),
                                     "files", fileDir);
-            string filepath = AppDomain.CurrentDomain.BaseDirectory + filename;
-            filepath = filename;
-            System.IO.File.Delete(filename);
+            FileInfo file = new FileInfo(filepath);
+            file.Delete();
             var response = new HttpResponseMessage(System.Net.HttpStatusCode.OK);
             response.Content = new StringContent("File sucessfully deleted");
             return response;

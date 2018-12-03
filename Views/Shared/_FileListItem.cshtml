@@ -1,8 +1,8 @@
 @model FileModel
 @{
     var fileSize = Model.Size / 1024;
-    var address = "/Home/download/?fileDir=" + Model.Owner + "//" + Model.Name;
-    var file = Model.Owner + "// //" + Model.Name; 
+    var address = "/Home/download/?fileDir=" + Model.Owner + "/" + Model.Name;
+    var file = Model.Owner + "/" + Model.Name; 
 }
 
 <tr class="clickable-file" data-href=@address>
