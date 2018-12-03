@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using System.IO;
 using System.Linq;
+using System.Security.Claims;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Identity;
@@ -35,9 +36,24 @@ namespace CSCI_3600_Group_Project.Controllers
             return View();
         }
 
-        public IActionResult Home()
-        {
-            return View();
+        public IActionResult UserHome()
+        {            
+            var userName = this.User.Identity.Name;
+            var directoryInfo = new DirectoryInfo($"./files/{userName}/");
+            var files = directoryInfo.GetFiles("");
+            var outputFileList = new List<FileModel>();
+            var i = 0;
+            foreach (var file in files)
+            {
+                outputFileList.Add(new FileModel());
+                outputFileList[i].Name = file.Name;
+                outputFileList[i].Size = file.Length;
+                outputFileList[i].FileType = file.Extension;
+                outputFileList[i].LastModified = file.LastWriteTimeUtc;
+                outputFileList[i].Owner = User.Identity.Name;
+                i++;
+            }
+            return View(outputFileList);
         }
 
         public IActionResult Privacy()

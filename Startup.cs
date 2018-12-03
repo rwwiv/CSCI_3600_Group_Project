@@ -93,6 +93,9 @@ namespace CSCI_3600_Group_Project
                 routes.MapRoute(
                     name: "default",
                     template: "{controller=Home}/{action=Index}/{id?}");
+                routes.MapRoute(
+                    name: "fileAPI",
+                    template: "{controller=Files}/{action=Index}/{id?}");
             });
         }
     }
