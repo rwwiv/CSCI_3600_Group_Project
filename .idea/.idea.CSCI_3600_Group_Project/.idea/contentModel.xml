@@ -4,8 +4,8 @@
     <e p="C:\Users\willi\.Rider2018.3\config\consoles\db" t="IncludeRecursive" />
     <e p="C:\Users\willi\.Rider2018.3\config\scratches" t="IncludeRecursive" />
     <e p="C:\Users\willi\.Rider2018.3\system\extResources" t="IncludeRecursive" />
-    <e p="C:\Users\willi\.Rider2018.3\system\resharper-host\local\Transient\ReSharperHost\v183\SolutionCaches\_CSCI_3600_Group_Project.1993489060.00" t="ExcludeRecursive" />
-    <e p="C:\Users\willi\RiderProjects\CSCI_3600_Group_Project" t="IncludeRecursive">
+    <e p="C:\Users\willi\.Rider2018.3\system\resharper-host\local\Transient\ReSharperHost\v183\SolutionCaches\_CSCI_3600_Group_Project.-1950567898.00" t="ExcludeRecursive" />
+    <e p="C:\Users\willi\source\repos\CSCI_3600_Group_Project" t="IncludeRecursive">
       <e p="app.db" t="Include" />
       <e p="appsettings.Development.json" t="Include" />
       <e p="appsettings.json" t="Include" />
@@ -85,6 +85,7 @@
       </e>
       <e p="bin" t="ExcludeRecursive" />
       <e p="Controllers" t="Include">
+        <e p="FilesController.cs" t="Include" />
         <e p="HomeController.cs" t="Include" />
       </e>
       <e p="CSCI_3600_Group_Project.csproj" t="IncludeRecursive" />
@@ -95,6 +96,12 @@
           <e p="00000000000000_CreateIdentitySchema.cs" t="Include" />
           <e p="00000000000000_CreateIdentitySchema.Designer.cs" t="Include" />
           <e p="ApplicationDbContextModelSnapshot.cs" t="Include" />
+        </e>
+      </e>
+      <e p="files" t="Include">
+        <e p="william.wernert@gmail.com" t="Include">
+          <e p="NewFile1.txt" t="Include" />
+          <e p="NewFile2.txt" t="Include" />
         </e>
       </e>
       <e p="gulpfile.js" t="Include" />
@@ -132,10 +139,9 @@
         <e p="Home" t="Include">
           <e p="About.cshtml" t="Include" />
           <e p="Contact.cshtml" t="Include" />
-          <e p="Home.cshtml" t="Include" />
-          <e p="Home.cshtml.cs" t="Include" />
           <e p="Index.cshtml" t="Include" />
           <e p="Privacy.cshtml" t="Include" />
+          <e p="UserHome.cshtml" t="Include" />
         </e>
         <e p="Shared" t="Include">
           <e p="_CookieConsentPartial.cshtml" t="Include" />
