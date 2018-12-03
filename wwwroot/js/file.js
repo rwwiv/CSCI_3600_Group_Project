@@ -79,6 +79,7 @@ jQuery(document).ready(function($) {
         e.stopPropagation();
     });
 });
+
 function deleteLoad(fileloc) {
     $.ajax({
         type: "GET",
