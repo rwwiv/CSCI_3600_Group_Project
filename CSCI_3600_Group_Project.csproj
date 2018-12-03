@@ -1,7 +1,7 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk.Web">
-    <Target Name="RunGulp" BeforeTargets="Build">
-        <Exec Command="node_modules\.bin\gulp" />
-    </Target>
+<!--    <Target Name="RunGulp" BeforeTargets="Build">
+        <Exec Command="gulp" />
+    </Target>-->
     <PropertyGroup>
         <TargetFramework>netcoreapp2.1</TargetFramework>
         <UserSecretsId>aspnet-CSCI_3600_Group_Project-2AB85CEE-CBE2-4C2D-AC9E-2372E3F2B09D</UserSecretsId>

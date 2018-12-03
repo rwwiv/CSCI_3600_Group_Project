@@ -12867,30 +12867,28 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\willi\\.nuget\\packages\\": {},
-    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
+    "/home/rwwiv/.nuget/packages/": {},
+    "/usr/share/dotnet/sdk/NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\willi\\source\\repos\\CSCI_3600_Group_Project\\CSCI_3600_Group_Project.csproj",
+      "projectUniqueName": "/home/rwwiv/RiderProjects/CSCI_3600_Group_Project/CSCI_3600_Group_Project.csproj",
       "projectName": "CSCI_3600_Group_Project",
-      "projectPath": "C:\\Users\\willi\\source\\repos\\CSCI_3600_Group_Project\\CSCI_3600_Group_Project.csproj",
-      "packagesPath": "C:\\Users\\willi\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\willi\\source\\repos\\CSCI_3600_Group_Project\\obj\\",
+      "projectPath": "/home/rwwiv/RiderProjects/CSCI_3600_Group_Project/CSCI_3600_Group_Project.csproj",
+      "packagesPath": "/home/rwwiv/.nuget/packages/",
+      "outputPath": "/home/rwwiv/RiderProjects/CSCI_3600_Group_Project/obj/",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
-        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        "/usr/share/dotnet/sdk/NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "C:\\Users\\willi\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        "/home/rwwiv/.config/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "netcoreapp2.1"
       ],
       "sources": {
-        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {

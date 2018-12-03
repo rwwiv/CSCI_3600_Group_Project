@@ -1,24 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ContentModelStore">
-    <e p="C:\Users\willi\.Rider2018.3\config\consoles\db" t="IncludeRecursive" />
-    <e p="C:\Users\willi\.Rider2018.3\config\scratches" t="IncludeRecursive" />
-    <e p="C:\Users\willi\.Rider2018.3\system\extResources" t="IncludeRecursive" />
-    <e p="C:\Users\willi\.Rider2018.3\system\resharper-host\local\Transient\ReSharperHost\v183\SolutionCaches\_CSCI_3600_Group_Project.-1950567898.00" t="ExcludeRecursive" />
-    <e p="C:\Users\willi\source\repos\CSCI_3600_Group_Project" t="IncludeRecursive">
+    <e p="$USER_HOME$/.Rider2018.2/system/extResources" t="IncludeRecursive" />
+    <e p="$USER_HOME$/.Rider2018.2/system/resharper-host/local/Transient/ReSharperHost/v182/SolutionCaches/_CSCI_3600_Group_Project.1218813543.00" t="ExcludeRecursive" />
+    <e p="$PROJECT_DIR$" t="IncludeRecursive">
       <e p=".gitignore" t="Include" />
-      <e p="app.db" t="Include" />
-      <e p="appsettings.Development.json" t="Include" />
-      <e p="appsettings.json" t="Include" />
       <e p="Areas" t="Include">
         <e p="Identity" t="Include">
           <e p="IdentityHostingStartup.cs" t="Include" />
           <e p="Pages" t="Include">
-            <e p="_ValidationScriptsPartial.cshtml" t="Include" />
-            <e p="_ViewImports.cshtml" t="Include" />
-            <e p="_ViewStart.cshtml" t="Include" />
             <e p="Account" t="Include">
-              <e p="_ViewImports.cshtml" t="Include" />
               <e p="AccessDenied.cshtml" t="Include" />
               <e p="AccessDenied.cshtml.cs" t="Include" />
               <e p="ConfirmEmail.cshtml" t="Include" />
@@ -40,11 +31,6 @@
               <e p="Logout.cshtml" t="Include" />
               <e p="Logout.cshtml.cs" t="Include" />
               <e p="Manage" t="Include">
-                <e p="_Layout.cshtml" t="Include" />
-                <e p="_ManageNav.cshtml" t="Include" />
-                <e p="_StatusMessage.cshtml" t="Include" />
-                <e p="_ViewImports.cshtml" t="Include" />
-                <e p="_ViewStart.cshtml" t="Include" />
                 <e p="ChangePassword.cshtml" t="Include" />
                 <e p="ChangePassword.cshtml.cs" t="Include" />
                 <e p="DeletePersonalData.cshtml" t="Include" />
@@ -70,6 +56,11 @@
                 <e p="SetPassword.cshtml.cs" t="Include" />
                 <e p="TwoFactorAuthentication.cshtml" t="Include" />
                 <e p="TwoFactorAuthentication.cshtml.cs" t="Include" />
+                <e p="_Layout.cshtml" t="Include" />
+                <e p="_ManageNav.cshtml" t="Include" />
+                <e p="_StatusMessage.cshtml" t="Include" />
+                <e p="_ViewImports.cshtml" t="Include" />
+                <e p="_ViewStart.cshtml" t="Include" />
               </e>
               <e p="Register.cshtml" t="Include" />
               <e p="Register.cshtml.cs" t="Include" />
@@ -77,48 +68,72 @@
               <e p="ResetPassword.cshtml.cs" t="Include" />
               <e p="ResetPasswordConfirmation.cshtml" t="Include" />
               <e p="ResetPasswordConfirmation.cshtml.cs" t="Include" />
+              <e p="_ViewImports.cshtml" t="Include" />
             </e>
             <e p="Error.cshtml" t="Include" />
             <e p="Error.cshtml.cs" t="Include" />
+            <e p="_ValidationScriptsPartial.cshtml" t="Include" />
+            <e p="_ViewImports.cshtml" t="Include" />
+            <e p="_ViewStart.cshtml" t="Include" />
           </e>
           <e p="Services" t="Include" />
         </e>
       </e>
-      <e p="bin" t="ExcludeRecursive" />
+      <e p="CSCI_3600_Group_Project.csproj" t="IncludeRecursive" />
       <e p="Controllers" t="Include">
         <e p="FilesController.cs" t="Include" />
         <e p="HomeController.cs" t="Include" />
       </e>
-      <e p="CSCI_3600_Group_Project.csproj" t="IncludeRecursive" />
-      <e p="CSCI_3600_Group_Project.sln" t="IncludeFlat" />
       <e p="Data" t="Include">
         <e p="ApplicationDbContext.cs" t="Include" />
         <e p="Migrations" t="Include">
-          <e p="00000000000000_CreateIdentitySchema.cs" t="Include" />
           <e p="00000000000000_CreateIdentitySchema.Designer.cs" t="Include" />
+          <e p="00000000000000_CreateIdentitySchema.cs" t="Include" />
           <e p="ApplicationDbContextModelSnapshot.cs" t="Include" />
         </e>
       </e>
-      <e p="files" t="Include">
-        <e p=".gitignore" t="Include" />
-        <e p="william.wernert@gmail.com" t="Include">
-          <e p="NewFile1.txt" t="Include" />
-          <e p="test.docx" t="Include" />
-        </e>
-      </e>
-      <e p="gulpfile.js" t="Include" />
       <e p="Models" t="Include">
         <e p="ErrorViewModel.cs" t="Include" />
         <e p="FileModel.cs" t="Include" />
       </e>
-      <e p="node_modules" t="ExcludeRecursive">
-        <e p="bootstrap" t="IncludeRecursive" />
-        <e p="gulp" t="IncludeRecursive" />
-        <e p="gulp-cli" t="IncludeRecursive" />
-        <e p="gulp-concat" t="IncludeRecursive" />
-        <e p="jquery" t="IncludeRecursive" />
-        <e p="popper.js" t="IncludeRecursive" />
+      <e p="Program.cs" t="Include" />
+      <e p="Properties" t="Include">
+        <e p="launchSettings.json" t="Include" />
       </e>
+      <e p="ScaffoldingReadme.txt" t="Include" />
+      <e p="Startup.cs" t="Include" />
+      <e p="Views" t="Include">
+        <e p="Home" t="Include">
+          <e p="About.cshtml" t="Include" />
+          <e p="Contact.cshtml" t="Include" />
+          <e p="Index.cshtml" t="Include" />
+          <e p="Privacy.cshtml" t="Include" />
+          <e p="UserHome.cshtml" t="Include" />
+        </e>
+        <e p="Shared" t="Include">
+          <e p="Error.cshtml" t="Include" />
+          <e p="_CookieConsentPartial.cshtml" t="Include" />
+          <e p="_FileListItem.cshtml" t="Include" />
+          <e p="_Layout.cshtml" t="Include" />
+          <e p="_LoginPartial.cshtml" t="Include" />
+          <e p="_QuickAccessCard.cshtml" t="Include" />
+          <e p="_ValidationScriptsPartial.cshtml" t="Include" />
+        </e>
+        <e p="_ViewImports.cshtml" t="Include" />
+        <e p="_ViewStart.cshtml" t="Include" />
+      </e>
+      <e p="app.db" t="Include" />
+      <e p="appsettings.Development.json" t="Include" />
+      <e p="appsettings.json" t="Include" />
+      <e p="bin" t="ExcludeRecursive" />
+      <e p="files" t="Include">
+        <e p=".gitignore" t="Include" />
+        <e p="william.wernert@gmail.com" t="Include">
+          <e p="test.odt" t="Include" />
+          <e p="test.txt" t="Include" />
+        </e>
+      </e>
+      <e p="gulpfile.js" t="Include" />
       <e p="obj" t="ExcludeRecursive">
         <e p="Debug" t="Include">
           <e p="netcoreapp2.1" t="Include">
@@ -129,32 +144,6 @@
       <e p="package-lock.json" t="Include" />
       <e p="package.json" t="Include" />
       <e p="packages" t="ExcludeRecursive" />
-      <e p="Program.cs" t="Include" />
-      <e p="Properties" t="Include">
-        <e p="launchSettings.json" t="Include" />
-      </e>
-      <e p="ScaffoldingReadme.txt" t="Include" />
-      <e p="Startup.cs" t="Include" />
-      <e p="Views" t="Include">
-        <e p="_ViewImports.cshtml" t="Include" />
-        <e p="_ViewStart.cshtml" t="Include" />
-        <e p="Home" t="Include">
-          <e p="About.cshtml" t="Include" />
-          <e p="Contact.cshtml" t="Include" />
-          <e p="Index.cshtml" t="Include" />
-          <e p="Privacy.cshtml" t="Include" />
-          <e p="UserHome.cshtml" t="Include" />
-        </e>
-        <e p="Shared" t="Include">
-          <e p="_CookieConsentPartial.cshtml" t="Include" />
-          <e p="_FileListItem.cshtml" t="Include" />
-          <e p="_Layout.cshtml" t="Include" />
-          <e p="_LoginPartial.cshtml" t="Include" />
-          <e p="_QuickAccessCard.cshtml" t="Include" />
-          <e p="_ValidationScriptsPartial.cshtml" t="Include" />
-          <e p="Error.cshtml" t="Include" />
-        </e>
-      </e>
       <e p="wwwroot" t="Include">
         <e p="css" t="Include">
           <e p="all.css" t="Include" />
@@ -175,6 +164,7 @@
         <e p="lib" t="Include">
           <e p="bootstrap" t="Include">
             <e p=".bower.json" t="Include" />
+            <e p="LICENSE" t="Include" />
             <e p="dist" t="Include">
               <e p="css" t="Include">
                 <e p="bootstrap-theme.css" t="Include" />
@@ -199,32 +189,31 @@
                 <e p="npm.js" t="Include" />
               </e>
             </e>
-            <e p="LICENSE" t="Include" />
           </e>
           <e p="jquery" t="Include">
             <e p=".bower.json" t="Include" />
+            <e p="LICENSE.txt" t="Include" />
             <e p="dist" t="Include">
               <e p="jquery.js" t="Include" />
               <e p="jquery.min.js" t="Include" />
               <e p="jquery.min.map" t="Include" />
             </e>
-            <e p="LICENSE.txt" t="Include" />
           </e>
           <e p="jquery-validation" t="Include">
             <e p=".bower.json" t="Include" />
+            <e p="LICENSE.md" t="Include" />
             <e p="dist" t="Include">
               <e p="additional-methods.js" t="Include" />
               <e p="additional-methods.min.js" t="Include" />
               <e p="jquery.validate.js" t="Include" />
               <e p="jquery.validate.min.js" t="Include" />
             </e>
-            <e p="LICENSE.md" t="Include" />
           </e>
           <e p="jquery-validation-unobtrusive" t="Include">
             <e p=".bower.json" t="Include" />
+            <e p="LICENSE.txt" t="Include" />
             <e p="jquery.validate.unobtrusive.js" t="Include" />
             <e p="jquery.validate.unobtrusive.min.js" t="Include" />
-            <e p="LICENSE.txt" t="Include" />
           </e>
         </e>
         <e p="vendor.min.css" t="Include" />
