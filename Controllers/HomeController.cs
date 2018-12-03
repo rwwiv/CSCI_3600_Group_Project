@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using System.IO;
 using System.Linq;
+using System.Net.Http;
+using Microsoft.AspNetCore.StaticFiles;
 using System.Security.Claims;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
@@ -44,7 +46,42 @@ namespace CSCI_3600_Group_Project.Controllers
             }
             return View(outputFileList);
         }
+        
+        [HttpGet]
+        [Route("Home/download")]
+        public ActionResult DownloadFile(string fileDir)
+        {
+            string filename = Path.Combine(Directory.GetCurrentDirectory(),
+                                    "files", fileDir);
+            string filepath = AppDomain.CurrentDomain.BaseDirectory + filename;
+            filepath = filename;
+            byte[] filedata = System.IO.File.ReadAllBytes(filepath);
+            string contentType = Type(filepath);
 
+            var cd = new System.Net.Mime.ContentDisposition
+            {
+                FileName = filename,
+                Inline = false,
+            };
+            Response.Headers.Add("Content-Disposition", cd.ToString());
+
+            return File(filedata, contentType);
+        }
+
+        [HttpGet]
+        [Route("Home/delete")]
+        public HttpResponseMessage DeleteFile(string fileDir)
+        {
+            string filename = Path.Combine(Directory.GetCurrentDirectory(),
+                                    "files", fileDir);
+            string filepath = AppDomain.CurrentDomain.BaseDirectory + filename;
+            filepath = filename;
+            System.IO.File.Delete(filename);
+            var response = new HttpResponseMessage(System.Net.HttpStatusCode.OK);
+            response.Content = new StringContent("File sucessfully deleted");
+            return response;
+        }
+        
         public IActionResult Privacy()
         {
             return View();
