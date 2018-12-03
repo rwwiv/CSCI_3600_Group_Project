@@ -46,7 +46,14 @@ namespace CSCI_3600_Group_Project.Controllers
             }
             return View(outputFileList);
         }
-        
+
+        public String Type(String filepath)
+        {
+            string contentType;
+            new FileExtensionContentTypeProvider().TryGetContentType(filepath, out contentType);
+            return contentType ?? "application/octet-stream";
+        }
+
         [HttpGet]
         [Route("Home/download")]
         public ActionResult DownloadFile(string fileDir)
