@@ -41,11 +41,11 @@ $('.file').on("click", function (event) {
     });
 });
 
-$('#delete').on("click", function (event) {
+$('.delete').on("click", function (event) {
     event.preventDefault();
     $.ajax({
-        type: "DELETE",
-        url: "https://localhost:5001/Home/Delete/?fileDir=" + fileUrl,
+        type: "GET",
+        url: "/Delete/?fileDir=" + fileUrl,
         success: function () {
             alert("delete worked");
         },
@@ -56,4 +56,16 @@ $('#delete').on("click", function (event) {
     event.stopPropagation();
 });
 */
-
+function deleteLoad(fileloc) {
+    $.ajax({
+        type: "GET",
+        url: "/Home/Delete/?fileDir=" + fileloc,
+        success: function (response) {
+            console.log(response);
+            location.reload();
+        },
+        error: function () {
+            console.log("Delete didn't work");
+        }
+    });
+}

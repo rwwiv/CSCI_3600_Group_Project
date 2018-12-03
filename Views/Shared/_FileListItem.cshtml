@@ -1,6 +1,6 @@
 @model FileModel
 @{var address = "/Home/download/?fileDir=" + Model.Owner + "\\" + Model.Name;}
-
+@{var file = Model.Owner + "\\\\" + Model.Name; }
 @{
     var fileSize = Model.Size / 1024;
 }
@@ -13,6 +13,6 @@
     <td class="fileText">@Model.LastModified</td>
     <td class="fileText">@fileSize KB</td>
     <td>
-        <button class="btn btn-secondary">Delete</button>
+        <button class="btn btn-secondary delete" onclick="deleteLoad('@file')">Delete</button>
     </td>
 </tr>
