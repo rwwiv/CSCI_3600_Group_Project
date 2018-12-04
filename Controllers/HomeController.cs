@@ -12,6 +12,7 @@ using Microsoft.AspNetCore.Identity;
 using CSCI_3600_Group_Project.Models;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Server.Kestrel.Core;
+using Microsoft.AspNetCore.Http;
 
 namespace CSCI_3600_Group_Project.Controllers
 {
@@ -56,16 +57,16 @@ namespace CSCI_3600_Group_Project.Controllers
 
         [HttpGet]
         [Route("Home/download")]
-        public ActionResult DownloadFile(string fileDir)
+        public ActionResult DownloadFile(string fileName)
         {
             string filepath = Path.Combine(Directory.GetCurrentDirectory(),
-                                    "files", fileDir);
+                                    "files", this.User.Identity.Name, fileName);
             byte[] filedata = System.IO.File.ReadAllBytes(filepath);
             string contentType = Type(filepath);
 
             var cd = new System.Net.Mime.ContentDisposition
             {
-                FileName = filepath,
+                FileName = fileName,
                 Inline = false,
             };
             Response.Headers.Add("Content-Disposition", cd.ToString());
@@ -85,7 +86,34 @@ namespace CSCI_3600_Group_Project.Controllers
             response.Content = new StringContent("File sucessfully deleted");
             return response;
         }
-        
+
+        [HttpPost("Home/Upload")]
+        public async Task<IActionResult> Upload(string fileDir, List<IFormFile> files)
+        {
+            long size = files.Sum(f => f.Length);
+
+            string incompletePath = Path.Combine(Directory.GetCurrentDirectory(),
+                                    "files", this.User.Identity.Name);
+
+            foreach (var formFile in files)
+            {
+                
+                if (formFile.Length > 0)
+                {
+                    string filePath = incompletePath + '/' + formFile.FileName;
+                    using (var stream = new FileStream(filePath, FileMode.Create))
+                    {
+                        await formFile.CopyToAsync(stream);
+                    }
+                }
+            }
+
+            // process uploaded files
+            // Don't rely on or trust the FileName property without validation.
+
+            return Ok(new { count = files.Count, size, incompletePath });
+        }
+
         public IActionResult Privacy()
         {
             return View();

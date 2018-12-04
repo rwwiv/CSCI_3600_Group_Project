@@ -1,7 +1,7 @@
 @model FileModel
 @{
     var fileSize = Model.Size / 1024;
-    var address = "/Home/download/?fileDir=" + Model.Owner + "/" + Model.Name + "&fileName=" + Model.Name;
+    var address = "/Home/download/?fileName=" + Model.Name;
     var file = Model.Owner + "/" + Model.Name;
 }
 
