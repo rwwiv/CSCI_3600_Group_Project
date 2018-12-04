@@ -10,7 +10,7 @@
                 <div class="input-group">
                     <div class="custom-file">
                         <input type="file" name ="files"class="custom-file-input" id="inputGroupFile01" multiple>
-                        <label class="custom-file-label" for="inputGroupFile01">Choose file</label>
+                        <label class="custom-file-label file-name" for="inputGroupFile01">Choose file</label>
                     </div>
                     <div class="input-group-append">
                         <button class="btn btn-outline-secondary" type="submit">Upload</button>
@@ -22,16 +22,13 @@
     </div>
     <hr />
     <div class="row">
-        @for (var i = 0; i < Math.Min(5, Model.Count); i++)
+        @for (var i = 0; i < Math.Min(5, (Model.Count - 1)); i++)
         {
-            if (Model[i].Name != ".gitignore")
-            {
-                <div class="col card-column">
-                    <partial name="_QuickAccessCard" model="@Model[i]" />
-                </div>
-            }
+            <div class="col card-column">
+                <partial name="_QuickAccessCard" model="@Model[i]" />
+            </div>
         }
-        @for (var i = 0; i < (5 - Model.Count); i++)
+        @for (var i = 0; i < (5 - (Model.Count - 1)); i++)
         {
             <div class="col card-column"></div>
         }
@@ -58,6 +55,21 @@
 </div>
 
 @section Scripts {
+    <script src="~/js/file.js"></script>
+    <script>
+        $(function() {
+            var fileCardText = $(".file-name");
+            for (var i = 0; i < fileCardText.length; i++) {
+                var fileSplit = fileCardText[i].innerText.split('.');
+                var fileName = fileSplit.shift();
+                if (fileName.length > 20) {
+                    var subStr = fileCardText[i].innerText.substring(0,10);
+                    fileCardText[i].innerText = subStr;
+                    fileCardText[i].innerText += '...';
+                }
+            }
+        });
+    </script>
     <script type="text/javascript">
         $('#inputGroupFile01').on('change', function () {
             console.log($(this));
@@ -72,7 +84,5 @@
     
         })
     </script>
-    <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
-    <script src="~/js/file.js"></script>
 }
 
