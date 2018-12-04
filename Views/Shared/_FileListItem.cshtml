@@ -1,7 +1,8 @@
 @model FileModel
 @{
     var fileSize = Model.Size / 1024;
-    var address = "/Home/download/?fileName=" + Model.Name;
+    string modelName = Model.Name.Replace(" ", "%20");
+    var address = "/Home/download/?fileName=" + modelName;
     var file = Model.Owner + "/" + Model.Name;
 }
 

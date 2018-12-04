@@ -98,7 +98,7 @@ namespace CSCI_3600_Group_Project.Controllers
             foreach (var formFile in files)
             {
                 
-                if (formFile.Length > 0)
+                if (formFile.Length >= 0)
                 {
                     string filePath = incompletePath + '/' + formFile.FileName;
                     using (var stream = new FileStream(filePath, FileMode.Create))
