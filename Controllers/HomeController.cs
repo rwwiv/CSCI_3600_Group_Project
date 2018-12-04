@@ -18,8 +18,11 @@ namespace CSCI_3600_Group_Project.Controllers
 {
     public class HomeController : Controller
     {
+        string folderPath;
+
         public HomeController()
         {
+            folderPath = Path.Combine(Directory.GetCurrentDirectory(), "files", this.User.Identity.Name);
         }
         public IActionResult Index()
         {
@@ -31,7 +34,7 @@ namespace CSCI_3600_Group_Project.Controllers
         {            
             var userName = this.User.Identity.Name;
             var directoryInfo = new DirectoryInfo($"./files/{userName}/");
-            var files = directoryInfo.GetFiles("");
+             var files = directoryInfo.GetFiles("");
             var outputFileList = new List<FileModel>();
             var i = 0;
             foreach (var file in files)
@@ -60,8 +63,7 @@ namespace CSCI_3600_Group_Project.Controllers
         [Route("Home/download")]
         public ActionResult DownloadFile(string fileName)
         {
-            string filepath = Path.Combine(Directory.GetCurrentDirectory(),
-                                    "files", this.User.Identity.Name, fileName);
+            string filepath = Path.Combine(folderPath, fileName);
             byte[] filedata = System.IO.File.ReadAllBytes(filepath);
             string contentType = Type(filepath);
 
@@ -80,8 +82,7 @@ namespace CSCI_3600_Group_Project.Controllers
         [Route("Home/delete")]
         public HttpResponseMessage DeleteFile(string fileDir)
         {
-            string filepath = Path.Combine(Directory.GetCurrentDirectory(),
-                                     "files", this.User.Identity.Name, fileDir);
+            string filepath = Path.Combine(folderPath, fileDir);
             FileInfo file = new FileInfo(filepath);
             file.Delete();
             var response = new HttpResponseMessage(System.Net.HttpStatusCode.OK);
@@ -93,7 +94,7 @@ namespace CSCI_3600_Group_Project.Controllers
         [DisableRequestSizeLimit]
         public IActionResult ViewFile(string fileDir)
         {
-            string filePath = Path.Combine(Directory.GetCurrentDirectory(), "files", this.User.Identity.Name, fileDir);
+            string filePath = Path.Combine(folderPath, fileDir);
 
             FileInfo file = new FileInfo(filePath);
             FileModel fileToView = new FileModel();
