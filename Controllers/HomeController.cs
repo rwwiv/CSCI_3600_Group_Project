@@ -89,7 +89,16 @@ namespace CSCI_3600_Group_Project.Controllers
             };
             Response.Headers.Add("Content-Disposition", cd.ToString());
 
-            return File(filedata, contentType);
+            if (validForViewing(contentType))
+            {
+                return File(filedata, contentType);
+            }
+
+            else
+            {
+                UnviewableFileModel FileUnviewable = new UnviewableFileModel();
+                return View(FileUnviewable);
+            }
         }
         [Authorize]
         [HttpGet]
@@ -141,6 +150,28 @@ namespace CSCI_3600_Group_Project.Controllers
         public IActionResult Error()
         {
             return View(new ErrorViewModel {RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier});
+        }
+
+        private bool validForViewing(string type)
+        {
+            switch(type){
+                case "application/octet-stream":
+                    return true;
+                case "application/json":
+                    return true;
+                case "text/plain":
+                    return true;
+                default:
+                    return isVideoOrImage(type);
+            }
+        }
+
+        private bool isVideoOrImage(string type)
+        {
+            if (type.Contains("video/") || type.Contains("image/"))
+                return true;
+            else
+                return false;
         }
     }
 }
