@@ -78,6 +78,9 @@ $(function() {
     $('.file-card-info').click(function(e) {
         e.stopPropagation();
     });
+    $('.view').click(function(e) {
+        e.stopPropagation();
+    });
 });
 
 function deleteLoad(fileloc) {
