@@ -74,12 +74,13 @@ namespace CSCI_3600_Group_Project.Controllers
             return File(filedata, contentType);
         }
 
+        [Authorize]
         [HttpGet]
         [Route("Home/delete")]
         public HttpResponseMessage DeleteFile(string fileDir)
         {
             string filepath = Path.Combine(Directory.GetCurrentDirectory(),
-                                    "files", fileDir);
+                                     "files", this.User.Identity.Name, fileDir);
             FileInfo file = new FileInfo(filepath);
             file.Delete();
             var response = new HttpResponseMessage(System.Net.HttpStatusCode.OK);

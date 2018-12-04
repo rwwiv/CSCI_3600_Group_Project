@@ -3,7 +3,6 @@
     var fileSize = Model.Size / 1024;
     string modelName = Model.Name.Replace(" ", "%20");
     var address = "/Home/download/?fileName=" + modelName;
-    var file = Model.Owner + "/" + Model.Name;
 }
 
 <tr class="clickable-file" data-href=@address>
@@ -15,6 +14,6 @@
     <td class="file-text">@Model.LastModified</td>
     <td class="file-text">@fileSize KB</td>
     <td>
-        <button class="btn btn-secondary delete" onclick="deleteLoad('@file')">Delete</button>
+        <button class="btn btn-secondary delete" onclick="deleteLoad('@Model.Name')">Delete</button>
     </td>
 </tr>
