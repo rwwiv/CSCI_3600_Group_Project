@@ -1,6 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.IO;
+using System.Linq;
+using System.Text;
 using System.Text.Encodings.Web;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Authorization;
@@ -83,6 +86,16 @@ namespace CSCI_3600_Group_Project.Areas.Identity.Pages.Account
                         $"Please confirm your account by <a href='{HtmlEncoder.Default.Encode(callbackUrl)}'>clicking here</a>.");
 
                     await _signInManager.SignInAsync(user, isPersistent: false);
+
+                    string path = $"../../../../files/{this.User.Identity.Name}";
+                    
+                    Directory.CreateDirectory(path);
+                    using (FileStream fs = System.IO.File.Create(path + "/.gitignore"))
+                    {
+                        byte[] ignoreString = new UTF8Encoding(true).GetBytes("*");
+                        fs.Write(ignoreString, 0, ignoreString.Length);
+                    }
+                    
                     return LocalRedirect(returnUrl);
                 }
                 foreach (var error in result.Errors)

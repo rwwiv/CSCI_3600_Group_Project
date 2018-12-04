@@ -1,13 +1,13 @@
 ﻿{
   "version": "1.0.0",
   "restore": {
-    "projectUniqueName": "/home/rwwiv/RiderProjects/CSCI_3600_Group_Project/CSCI_3600_Group_Project.csproj",
+    "projectUniqueName": "C:\\Users\\willi\\source\\repos\\CSCI_3600_Group_Project\\CSCI_3600_Group_Project.csproj",
     "projectName": "CSCI_3600_Group_Project",
-    "projectPath": "/home/rwwiv/RiderProjects/CSCI_3600_Group_Project/CSCI_3600_Group_Project.csproj",
-    "outputPath": "/home/rwwiv/RiderProjects/CSCI_3600_Group_Project/obj/",
+    "projectPath": "C:\\Users\\willi\\source\\repos\\CSCI_3600_Group_Project\\CSCI_3600_Group_Project.csproj",
+    "outputPath": "C:\\Users\\willi\\source\\repos\\CSCI_3600_Group_Project\\obj\\",
     "projectStyle": "PackageReference",
     "fallbackFolders": [
-      "/usr/share/dotnet/sdk/NuGetFallbackFolder"
+      "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
     ],
     "originalTargetFrameworks": [
       "netcoreapp2.1"
