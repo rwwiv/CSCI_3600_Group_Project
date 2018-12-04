@@ -61,6 +61,12 @@ body>.navbar {
 .file-listing {
     text-decoration: none;
 }
+.file-card {
+    max-height: 222px;
+}
+.card-column {
+    max-width: 20%;
+}
 /*
 #loginCard .form-group {
     width: 20rem;

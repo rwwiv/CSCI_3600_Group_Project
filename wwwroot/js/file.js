@@ -58,6 +58,17 @@ $('.delete').on("click", function (event) {
 */
 
 jQuery(document).ready(function($) {
+    var fileCardText = $(".file-name");
+    console.log(typeof fileCardText);
+    for (var i = 0; i < fileCardText.length; i++) {
+        var fileSplit = fileCardText[i].innerText.split('.');
+        var fileName = fileSplit.shift();
+        if (fileName.length > 20) {
+            var subStr = fileCardText[i].innerText.substring(0,10);
+            fileCardText[i].innerText = subStr;
+            fileCardText[i].innerText += '...';
+        }
+    }
     $(".clickable-file")
         .click(function(e) {
             window.location = $(this).data("href");

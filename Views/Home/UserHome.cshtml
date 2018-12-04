@@ -24,13 +24,16 @@
     <div class="row">
         @for (var i = 0; i < Math.Min(5, Model.Count); i++)
         {
-            <div class="col">
-                <partial name="_QuickAccessCard" model="@Model[i]" />
-            </div>
+            if (Model[i].Name != ".gitignore")
+            {
+                <div class="col card-column">
+                    <partial name="_QuickAccessCard" model="@Model[i]" />
+                </div>
+            }
         }
         @for (var i = 0; i < (5 - Model.Count); i++)
         {
-            <div class="col"></div>
+            <div class="col card-column"></div>
         }
     </div>
     <div style="margin-top: 1rem">
