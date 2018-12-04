@@ -97,16 +97,18 @@ function deleteLoad(fileloc) {
     });
 }
 
-function viewFile(fileLoc) {
+function viewLoad(fileloc) {
+    console.log(fileloc);
     $.ajax({
         type: "GET",
-        url: "/Home/ViewFile/?fileDir=" + fileLoc,
+        url: "/Home/View/?fileName=" + fileloc,
         success: function (response) {
             console.log(response);
-            location.reload();
+            var myWindow = window.open("", "MsgWindow", "width=1200,height=1000");
+            myWindow.document.write(response);
         },
         error: function () {
-            console.log("View file error");
+            alert("No file exists");
         }
-    })
+    });
 }

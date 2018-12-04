@@ -65,6 +65,18 @@
                     Home
                 </a>
             }
+            @if (!Context.Request.Path.Equals("/Identity/Account/Manage")
+                && !Context.Request.Path.Equals("/Identity/Account/Manage/ChangePassword")
+                && !Context.Request.Path.Equals("/Identity/Account/Manage/TwoFactorAuthentication")
+                && !Context.Request.Path.Equals("/Identity/Account/Manage/PersonalData"))
+            {
+                <a class="btn btn-secondary mr-2"
+                   asp-area="Identity"
+                   asp-page="/Account/Manage/Index"
+                   asp-route-returnUrl="@Url.Page("/")">
+                    Settings
+                </a>
+            }
             <button class="btn btn-secondary" type="submit">Logout</button>
         </form>
     }
