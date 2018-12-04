@@ -38,6 +38,7 @@ namespace CSCI_3600_Group_Project.Controllers
             {
                 outputFileList.Add(new FileModel());
                 outputFileList[i].Name = file.Name;
+                outputFileList[i].DisplayName = file.Name;
                 outputFileList[i].Size = file.Length;
                 outputFileList[i].FileType = file.Extension;
                 outputFileList[i].FontAwesomeFileType = file.Extension;

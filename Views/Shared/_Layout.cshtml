@@ -65,12 +65,9 @@
                     Home
                 </a>
             }
-            @if (!Context.Request.Path.Equals("/Identity/Account/Manage")
-                && !Context.Request.Path.Equals("/Identity/Account/Manage/ChangePassword")
-                && !Context.Request.Path.Equals("/Identity/Account/Manage/TwoFactorAuthentication")
-                && !Context.Request.Path.Equals("/Identity/Account/Manage/PersonalData"))
+            @if (!Context.Request.Path.StartsWithSegments("/Identity/Account/Manage"))
             {
-                <a class="btn btn-secondary mr-2"
+                <a class="btn btn-secondary"
                    asp-area="Identity"
                    asp-page="/Account/Manage/Index"
                    asp-route-returnUrl="@Url.Page("/")">
