@@ -56,6 +56,7 @@ namespace CSCI_3600_Group_Project.Controllers
         }
 
         [HttpGet]
+        [DisableRequestSizeLimit]
         [Route("Home/download")]
         public ActionResult DownloadFile(string fileName)
         {
@@ -87,7 +88,9 @@ namespace CSCI_3600_Group_Project.Controllers
             response.Content = new StringContent("File sucessfully deleted");
             return response;
         }
+        
         [Route("Home/ViewFile")]
+        [DisableRequestSizeLimit]
         public IActionResult ViewFile(string fileDir)
         {
             string filePath = Path.Combine(Directory.GetCurrentDirectory(), "files", this.User.Identity.Name, fileDir);
@@ -103,6 +106,7 @@ namespace CSCI_3600_Group_Project.Controllers
         }
 
         [HttpPost("Home/Upload")]
+        [DisableRequestSizeLimit]
         public async Task<IActionResult> Upload(string fileDir, List<IFormFile> files)
         {
             long size = files.Sum(f => f.Length);
