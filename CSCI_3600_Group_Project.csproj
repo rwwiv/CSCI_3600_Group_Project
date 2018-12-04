@@ -6,6 +6,12 @@
         <TargetFramework>netcoreapp2.1</TargetFramework>
         <UserSecretsId>aspnet-CSCI_3600_Group_Project-2AB85CEE-CBE2-4C2D-AC9E-2372E3F2B09D</UserSecretsId>
     </PropertyGroup>
+    <ItemGroup>
+      <Compile Remove="files\**" />
+      <Content Remove="files\**" />
+      <EmbeddedResource Remove="files\**" />
+      <None Remove="files\**" />
+    </ItemGroup>
 
     <ItemGroup>
         <None Update="app.db" CopyToOutputDirectory="PreserveNewest" />

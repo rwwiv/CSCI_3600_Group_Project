@@ -93,3 +93,17 @@ function deleteLoad(fileloc) {
         }
     });
 }
+
+function viewFile(fileLoc) {
+    $.ajax({
+        type: "GET",
+        url: "/Home/ViewFile/?fileDir=" + fileLoc,
+        success: function (response) {
+            console.log(response);
+            location.reload();
+        },
+        error: function () {
+            console.log("View file error");
+        }
+    })
+}

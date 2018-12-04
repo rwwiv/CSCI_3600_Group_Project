@@ -87,6 +87,20 @@ namespace CSCI_3600_Group_Project.Controllers
             response.Content = new StringContent("File sucessfully deleted");
             return response;
         }
+        [Route("Home/ViewFile")]
+        public IActionResult ViewFile(string fileDir)
+        {
+            string filePath = Path.Combine(Directory.GetCurrentDirectory(), "files", this.User.Identity.Name, fileDir);
+
+            FileInfo file = new FileInfo(filePath);
+            FileModel fileToView = new FileModel();
+            fileToView.FileType = file.Extension;
+            fileToView.LastModified = file.LastWriteTime;
+            fileToView.Name = file.Name;
+            fileToView.Size = file.Length;
+
+            return View(fileToView);
+        }
 
         [HttpPost("Home/Upload")]
         public async Task<IActionResult> Upload(string fileDir, List<IFormFile> files)
