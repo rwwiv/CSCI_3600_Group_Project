@@ -18,11 +18,8 @@ namespace CSCI_3600_Group_Project.Controllers
 {
     public class HomeController : Controller
     {
-        string folderPath;
-
         public HomeController()
         {
-            folderPath = Path.Combine(Directory.GetCurrentDirectory(), "files", this.User.Identity.Name);
         }
         public IActionResult Index()
         {
@@ -34,7 +31,7 @@ namespace CSCI_3600_Group_Project.Controllers
         {            
             var userName = this.User.Identity.Name;
             var directoryInfo = new DirectoryInfo($"./files/{userName}/");
-             var files = directoryInfo.GetFiles("");
+            var files = directoryInfo.GetFiles("");
             var outputFileList = new List<FileModel>();
             var i = 0;
             foreach (var file in files)
@@ -59,11 +56,11 @@ namespace CSCI_3600_Group_Project.Controllers
         }
 
         [HttpGet]
-        [DisableRequestSizeLimit]
         [Route("Home/download")]
         public ActionResult DownloadFile(string fileName)
         {
-            string filepath = Path.Combine(folderPath, fileName);
+            string filepath = Path.Combine(Directory.GetCurrentDirectory(),
+                                    "files", this.User.Identity.Name, fileName);
             byte[] filedata = System.IO.File.ReadAllBytes(filepath);
             string contentType = Type(filepath);
 
@@ -76,38 +73,39 @@ namespace CSCI_3600_Group_Project.Controllers
 
             return File(filedata, contentType);
         }
+        [HttpGet]
+        [Route("Home/view")]
+        public ActionResult ViewFile(string fileName)
+        {
+            string filepath = Path.Combine(Directory.GetCurrentDirectory(),
+                                    "files", this.User.Identity.Name, fileName);
+            byte[] filedata = System.IO.File.ReadAllBytes(filepath);
+            string contentType = Type(filepath);
 
+            var cd = new System.Net.Mime.ContentDisposition
+            {
+                FileName = fileName,
+                Inline = false,
+            };
+            Response.Headers.Add("Content-Disposition", cd.ToString());
+
+            return File(filedata, contentType);
+        }
         [Authorize]
         [HttpGet]
         [Route("Home/delete")]
         public HttpResponseMessage DeleteFile(string fileDir)
         {
-            string filepath = Path.Combine(folderPath, fileDir);
+            string filepath = Path.Combine(Directory.GetCurrentDirectory(),
+                                     "files", this.User.Identity.Name, fileDir);
             FileInfo file = new FileInfo(filepath);
             file.Delete();
             var response = new HttpResponseMessage(System.Net.HttpStatusCode.OK);
             response.Content = new StringContent("File sucessfully deleted");
             return response;
         }
-        
-        [Route("Home/ViewFile")]
-        [DisableRequestSizeLimit]
-        public IActionResult ViewFile(string fileDir)
-        {
-            string filePath = Path.Combine(folderPath, fileDir);
-
-            FileInfo file = new FileInfo(filePath);
-            FileModel fileToView = new FileModel();
-            fileToView.FileType = file.Extension;
-            fileToView.LastModified = file.LastWriteTime;
-            fileToView.Name = file.Name;
-            fileToView.Size = file.Length;
-
-            return View(fileToView);
-        }
 
         [HttpPost("Home/Upload")]
-        [DisableRequestSizeLimit]
         public async Task<IActionResult> Upload(string fileDir, List<IFormFile> files)
         {
             long size = files.Sum(f => f.Length);

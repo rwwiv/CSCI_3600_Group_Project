@@ -27,5 +27,12 @@
     <ItemGroup>
       <Folder Include="Areas\Identity\Services\" />
     </ItemGroup>
+
+    <ItemGroup>
+      <Content Update="Areas\Identity\Pages\Account\Manage\Index.cshtml">
+        <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+        <Pack>$(IncludeRazorContentInPack)</Pack>
+      </Content>
+    </ItemGroup>
    
 </Project>
