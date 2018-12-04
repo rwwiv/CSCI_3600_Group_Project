@@ -67,6 +67,9 @@ body>.navbar {
 .card-column {
     max-width: 20%;
 }
+.custom-file-label {
+    overflow: hidden;
+}
 /*
 #loginCard .form-group {
     width: 20rem;
