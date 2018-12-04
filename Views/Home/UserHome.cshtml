@@ -22,13 +22,13 @@
     </div>
     <hr />
     <div class="row">
-        @for (var i = 0; i < Math.Min(5, (Model.Count - 1)); i++)
+        @for (var i = 0; i < Math.Min(5, Model.Count); i++)
         {
             <div class="col card-column">
                 <partial name="_QuickAccessCard" model="@Model[i]" />
             </div>
         }
-        @for (var i = 0; i < (5 - (Model.Count - 1)); i++)
+        @for (var i = 0; i < (5 - Model.Count); i++)
         {
             <div class="col card-column"></div>
         }
@@ -56,7 +56,7 @@
 
 @section Scripts {
     <script src="~/js/file.js"></script>
-    <script>
+    @*<script>
         $(function() {
             var fileCardText = $(".file-name");
             for (var i = 0; i < fileCardText.length; i++) {
@@ -69,7 +69,7 @@
                 }
             }
         });
-    </script>
+    </script>*@
     <script type="text/javascript">
         $('#inputGroupFile01').on('change', function () {
             console.log($(this));
