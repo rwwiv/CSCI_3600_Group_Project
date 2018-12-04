@@ -12806,23 +12806,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Bilal\\.nuget\\packages\\": {},
+    "C:\\Users\\Chand\\.nuget\\packages\\": {},
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Bilal\\Source\\Repos\\CSCI_3600_Group_Project3\\CSCI_3600_Group_Project.csproj",
+      "projectUniqueName": "C:\\Users\\Chand\\Desktop\\Drive\\CSCI_3600_Group_Project.csproj",
       "projectName": "CSCI_3600_Group_Project",
-      "projectPath": "C:\\Users\\Bilal\\Source\\Repos\\CSCI_3600_Group_Project3\\CSCI_3600_Group_Project.csproj",
-      "packagesPath": "C:\\Users\\Bilal\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Bilal\\Source\\Repos\\CSCI_3600_Group_Project3\\obj\\",
+      "projectPath": "C:\\Users\\Chand\\Desktop\\Drive\\CSCI_3600_Group_Project.csproj",
+      "packagesPath": "C:\\Users\\Chand\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Chand\\Desktop\\Drive\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "C:\\Users\\Bilal\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Chand\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
