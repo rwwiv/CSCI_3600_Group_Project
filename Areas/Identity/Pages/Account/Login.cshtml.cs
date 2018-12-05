@@ -1,10 +1,14 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.IO;
 using System.Linq;
+using System.Text;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Authentication;
+using Microsoft.AspNetCore.Hosting;
+using Microsoft.AspNetCore.Hosting.Internal;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
@@ -17,11 +21,17 @@ namespace CSCI_3600_Group_Project.Areas.Identity.Pages.Account
     {
         private readonly SignInManager<IdentityUser> _signInManager;
         private readonly ILogger<LoginModel> _logger;
+        private readonly IHostingEnvironment _hostingEnvironment;
 
-        public LoginModel(SignInManager<IdentityUser> signInManager, ILogger<LoginModel> logger)
+
+        public LoginModel(SignInManager<IdentityUser> signInManager, 
+            ILogger<LoginModel> logger,
+            HostingEnvironment hostingEnvironment)
         {
             _signInManager = signInManager;
             _logger = logger;
+            _hostingEnvironment = hostingEnvironment;
+
         }
 
         [BindProperty]
@@ -71,11 +81,23 @@ namespace CSCI_3600_Group_Project.Areas.Identity.Pages.Account
 
             if (ModelState.IsValid)
             {
+                string rootPath = _hostingEnvironment.ContentRootPath;
+                string path = $"{rootPath}/files/{Input.Email}";
+                
                 // This doesn't count login failures towards account lockout
                 // To enable password failures to trigger account lockout, set lockoutOnFailure: true
                 var result = await _signInManager.PasswordSignInAsync(Input.Email, Input.Password, Input.RememberMe, lockoutOnFailure: true);
                 if (result.Succeeded)
                 {
+                    if (!Directory.Exists(path))
+                    {
+                        Directory.CreateDirectory(path);
+                        using (FileStream fs = System.IO.File.Create(path + "/.gitignore"))
+                        {
+                            byte[] ignoreString = new UTF8Encoding(true).GetBytes("*");
+                            fs.Write(ignoreString, 0, ignoreString.Length);
+                        }
+                    }
                     _logger.LogInformation("User logged in.");
                     return LocalRedirect(returnUrl);
                 }

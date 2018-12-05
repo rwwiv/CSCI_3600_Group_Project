@@ -55,8 +55,20 @@ body>.navbar {
     justify-content: center;
     align-items: center;
 }
-.fileText{
-    padding-top: 1.1rem !important;
+.file-text {
+    padding-top: 1.2em !important;
+}
+.file-listing {
+    text-decoration: none;
+}
+.file-card {
+    max-height: 222px;
+}
+.card-column {
+    max-width: 25%;
+}
+.custom-file-label {
+    overflow: hidden;
 }
 /*
 #loginCard .form-group {

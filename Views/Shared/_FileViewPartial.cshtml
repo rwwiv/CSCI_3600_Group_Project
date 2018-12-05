@@ -1,0 +1,55 @@
+﻿@model CSCI_3600_Group_Project.Models.FileModel
+
+@{
+    ViewData["Title"] = "ViewFile";
+}
+
+<h2>ViewFile</h2>
+
+<div>
+    <h4>FileModel</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.FontAwesomeFileType)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.FontAwesomeFileType)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.FileType)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.FileType)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Name)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Name)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Owner)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Owner)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.LastModified)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.LastModified)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Size)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Size)
+        </dd>
+    </dl>
+</div>
+@*<div>
+    @Html.ActionLink("Edit", "Edit", new { /* id = Model.PrimaryKey */ }) |
+    <a asp-action="Index">Back to List</a>
+</div>
+*@

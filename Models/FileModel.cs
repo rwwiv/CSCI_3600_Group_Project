@@ -60,6 +60,23 @@ namespace CSCI_3600_Group_Project.Models
         }
 
         public string FileType { get; set; }
+
+        private string _displayName;
+        public string DisplayName
+        {
+            get => _displayName;
+            set
+            {
+                if (value.Length > 12)
+                {
+                    _displayName = value.Substring(0, 12)+"...";
+                }
+                else
+                {
+                    _displayName = value;
+                }
+            }
+        }
         public string Name { get; set; }
         public string Owner { get; set; }
         public DateTime LastModified { get; set; }
