@@ -1,0 +1,132 @@
+/* COLOR SCHEME: Neutral Blue */
+header {
+    background-image: url(header.png);
+    background-position: right;
+    background-repeat: no-repeat;
+    border-radius: 10px 10px 0 0;
+}
+footer {
+  padding: 5px 10pc;
+  font-size: 10pt;
+  font-style: italic;
+  border-radius: 0 0 10px 10px;
+}
+header, footer {
+  background-color: #91AA9D;
+}
+nav {
+  background-color: #D1DBBD;
+  padding: 5px 10px;
+  font-size: 14pt;
+  font-weight: bold;
+  box-shadow: 0 10px 5px -5px #3E606F;
+  position: relative;
+}
+nav a {
+  text-decoration: none;
+}
+main {
+  background-color: #FCFFF5;
+  padding: 10px;
+  z-index: 0;
+}
+footer a, footer, header, nav, nav a, main a{
+  color: #193441;
+}
+.details {
+  color: #FCFFF5;
+  background-color: #3E606F;
+  float: right;
+  padding: 5px 10px;
+}
+header, section, footer, aside, nav, main, article, figure {
+  display: block;
+}
+body {
+  font-family: Calibri, Helvetica, Arial, sans-serif;
+  /*color: #FCFFF5;*/
+  background-color: #193441;
+}
+#wrapper {
+  width: 1000px;
+  margin: 10px auto;
+}
+h1 {
+  padding: 5px 10px;
+  font-size: 42pt;
+  line-height: 36pt;
+}
+h2 {
+  padding: 0 10px 5px;
+  font-size: 18pt;
+  line-height: 22pt;
+  font-style: italic;
+}
+h3 {
+  font-size: 24pt;
+}
+.experience h4 {
+  font-size: 18pt;
+}
+h1, h2, h3, .experience h4 {
+  margin: 0;
+  font-weight: lighter;
+}
+.experience .title {
+  font-size: 12pt;
+  font-style: italic;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+.experience .dates {
+  font-size: 12pt;
+  font-style: italic;
+  font-weight: bold;
+  float: right;
+}
+.experience .description {
+  font-size: 11pt;
+}
+.experience ul {
+  margin: 0;
+}
+.experience .responsibilities {
+  font-size: 10pt;
+  -webkit-column-count: 2;
+  -ms-column-count: 2;
+  -moz-column-count: 2;
+  column-count: 2;
+}
+.experience, .school {
+  margin: 20px;
+  padding: 5px 10px;
+  overflow: auto;
+  border-left: 10px solid #193441;
+  border-right: 1px dashed #193441;
+  border-top: 1px dashed #193441;
+  border-bottom: 1px dashed #193441;
+}
+.school img {
+  float: left;
+  margin: 20px;
+}
+.school h4 {
+  margin: 0 0 0 120px;
+}
+.school h4 {
+  font-size: 14pt;
+  font-weight: lighter;
+  margin: 0 0 0 120px; 
+}
+.school ul {
+  margin: 0 0 0 120px;
+}
+.bio img {
+  float: right;
+  margin: 20px;
+}
+
+
+
+
+

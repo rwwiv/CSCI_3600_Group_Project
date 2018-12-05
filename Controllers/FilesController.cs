@@ -10,7 +10,7 @@ namespace CSCI_3600_Group_Project.Controllers
         public JsonResult Index()
         {
             var userName = User.FindFirst("email");
-            var directoryInfo = new DirectoryInfo($"./files/{userName}/");
+            var directoryInfo = new DirectoryInfo($"./bukit/files/{userName}/");
             var files = directoryInfo.GetFiles("");
             return Json(files);
         }

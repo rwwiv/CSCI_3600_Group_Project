@@ -9,7 +9,7 @@
             <form method="post" class="inputform" enctype="multipart/form-data" asp-controller="Home" asp-action="Upload">
                 <div class="input-group">
                     <div class="custom-file">
-                        <input type="file" name ="files"class="custom-file-input" id="inputGroupFile01" multiple>
+                        <input type="file" name="files" class="custom-file-input" id="inputGroupFile01" multiple>
                         <label class="custom-file-label file-name" for="inputGroupFile01">Choose file</label>
                     </div>
                     <div class="input-group-append">
@@ -17,59 +17,68 @@
                     </div>
                 </div>
             </form>
-            
+
         </div>
     </div>
     <hr />
-    <div class="row">
-        @for (var i = 0; i < Math.Min(4, Model.Count); i++)
-        {
-            <div class="col card-column">
-                <partial name="_QuickAccessCardPartial" model="@Model[i]" />
-            </div>
-        }
-        @for (var i = 0; i < (4 - Model.Count); i++)
-        {
-            <div class="col card-column"></div>
-        }
-    </div>
-    <div style="margin-top: 1rem">
-        <table class="table">
-            <thead>
-                <tr>
-                    <th>Name</th>
-                    <th>Owner</th>
-                    <th>Last Modified</th>
-                    <th>Size</th>
-                    <th></th>
-                </tr>
-            </thead>
-            <tbody>
-                @foreach (FileModel fm in Model)
-                {
-                    <partial name="_FileListItemPartial" model="@fm" />
-                }
-            </tbody>
-        </table>
-    </div>
+    @if (Model.Count > 0)
+    {
+        <div class="row">
+            @for (var i = 0; i < Math.Min(4, Model.Count); i++)
+            {
+                <div class="col card-column">
+                    <partial name="_QuickAccessCardPartial" model="@Model[i]" />
+                </div>
+            }
+            @for (var i = 0; i < (4 - Model.Count); i++)
+            {
+                <div class="col card-column"></div>
+            }
+        </div>
+        <div style="margin-top: 1rem">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Owner</th>
+                        <th>Last Modified</th>
+                        <th>Size</th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (FileModel fm in Model)
+                    {
+                        <partial name="_FileListItemPartial" model="@fm" />
+                    }
+                </tbody>
+            </table>
+        </div>
+    }
+    else
+    {
+        <div class="jumbotron">
+            <h1 class="display-3">Welcome to your personal bukit. Go ahead and upload some files.</h1>
+        </div>
+    }
 </div>
 
 @section Scripts {
     <script src="~/js/file.js"></script>
     @*<script>
-        $(function() {
-            var fileCardText = $(".file-name");
-            for (var i = 0; i < fileCardText.length; i++) {
-                var fileSplit = fileCardText[i].innerText.split('.');
-                var fileName = fileSplit.shift();
-                if (fileName.length > 20) {
-                    var subStr = fileCardText[i].innerText.substring(0,10);
-                    fileCardText[i].innerText = subStr;
-                    fileCardText[i].innerText += '...';
+            $(function() {
+                var fileCardText = $(".file-name");
+                for (var i = 0; i < fileCardText.length; i++) {
+                    var fileSplit = fileCardText[i].innerText.split('.');
+                    var fileName = fileSplit.shift();
+                    if (fileName.length > 20) {
+                        var subStr = fileCardText[i].innerText.substring(0,10);
+                        fileCardText[i].innerText = subStr;
+                        fileCardText[i].innerText += '...';
+                    }
                 }
-            }
-        });
-    </script>*@
+            });
+        </script>*@
     <script type="text/javascript">
         $('#inputGroupFile01').on('change', function () {
             var maxfsize = 100000000;
@@ -84,12 +93,12 @@
                 $(this).next('.custom-file-label').html($(this)[0].files.length + " files selected.");
             }
             else {
-                var fileName = $(this).val();
-    
+                var fileName = $(this).val().split('\\').pop();
+
                 $(this).next('.custom-file-label').html(fileName);
             }
-    
-        })
+
+        });
     </script>
 }
 

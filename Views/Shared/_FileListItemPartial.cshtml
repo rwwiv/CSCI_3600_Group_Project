@@ -10,7 +10,7 @@
     }
     fileSize = Math.Ceiling(fileSize);
     string modelName = Model.Name.Replace(" ", "%20");
-    var address = "/Home/download/?fileName=" + modelName;
+    var address = "Download/?fileName=" + modelName;
 }
 
 <tr class="clickable-file" data-href=@address>
@@ -23,7 +23,7 @@
     <td class="file-text">@fileSize @sizes[pos]</td>
     <td>
         @* <button class="btn btn-secondary view" onclick="viewLoad('@Model.Name')">View</button> *@
-        <a class="btn btn-secondary" asp-controller="Home" asp-action="ViewFile" asp-route-fileName="@Model.Name">View</a>
+        <a class="btn btn-secondary view" asp-controller="Home" asp-action="ViewFile" asp-route-fileName="@Model.Name"  target="_blank">View</a>
         <button class="btn btn-secondary delete" onclick="deleteLoad('@Model.Name')">Delete</button>
     </td>
 </tr>

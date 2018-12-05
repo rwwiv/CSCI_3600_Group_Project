@@ -32,14 +32,13 @@ namespace CSCI_3600_Group_Project.Controllers
 
         [Authorize]
         public IActionResult UserHome()
-        {            
-            var userName = this.User.Identity.Name;
-            var directoryInfo = new DirectoryInfo($"./files/{userName}/");
-            var files = directoryInfo.GetFiles("");
+        {
+            var filepath = _fileProvider.GetDirectoryContents($"/bukit/files/{this.User.Identity.Name}");
             var outputFileList = new List<FileModel>();
             var i = 0;
-            foreach (var file in files)
+            foreach (var item in filepath)
             {
+                FileInfo file = new System.IO.FileInfo(item.PhysicalPath);
                 outputFileList.Add(new FileModel());
                 outputFileList[i].Name = file.Name;
                 outputFileList[i].DisplayName = file.Name;
@@ -50,6 +49,19 @@ namespace CSCI_3600_Group_Project.Controllers
                 outputFileList[i].Owner = User.Identity.Name;
                 i++;
             }
+           
+            //foreach (var file in files)
+            //{
+            //    outputFileList.Add(new FileModel());
+            //    outputFileList[i].Name = file.Name;
+            //    outputFileList[i].DisplayName = file.Name;
+            //    outputFileList[i].Size = file.Length;
+            //    outputFileList[i].FileType = file.Extension;
+            //    outputFileList[i].FontAwesomeFileType = file.Extension;
+            //    outputFileList[i].LastModified = file.LastWriteTimeUtc;
+            //    outputFileList[i].Owner = User.Identity.Name;
+            //    i++;
+            //}
             return View(outputFileList);
         }
 
@@ -64,8 +76,7 @@ namespace CSCI_3600_Group_Project.Controllers
         [Route("Home/Download")]
         public ActionResult DownloadFile(string fileName)
         {
-            string filepath = Path.Combine(Directory.GetCurrentDirectory(),
-                                    "files", this.User.Identity.Name, fileName);
+            string filepath = _fileProvider.GetFileInfo($"/bukit/files/{this.User.Identity.Name}/{fileName}").PhysicalPath;
             byte[] filedata = System.IO.File.ReadAllBytes(filepath);
             string contentType = Type(filepath);
 
@@ -82,10 +93,11 @@ namespace CSCI_3600_Group_Project.Controllers
         [Route("Home/View")]
         public ActionResult ViewFile(string fileName)
         {
-            string filepath = Path.Combine(Directory.GetCurrentDirectory(),
-                                    "files", this.User.Identity.Name, fileName);
-            IFileInfo file = _fileProvider.GetFileInfo($"/files/{this.User.Identity.Name}/{fileName}");
-
+            string filepath = _fileProvider.GetFileInfo($"/bukit/files/{this.User.Identity.Name}/{fileName}").PhysicalPath;
+            FileInfo fileInfo = new System.IO.FileInfo(filepath);
+            IFileInfo file = _fileProvider.GetFileInfo(filepath);
+            FileStream fileStream = new System.IO.FileStream(filepath, FileMode.Open);
+            //var file = new System.IO.FileInfo(filepath);
             string contentType = Type(filepath);
 
             var cd = new System.Net.Mime.ContentDisposition
@@ -95,7 +107,8 @@ namespace CSCI_3600_Group_Project.Controllers
             };
             Response.Headers.Add("Content-Disposition", cd.ToString());
 
-            return File(file.CreateReadStream(), contentType);
+            
+            return File(fileStream, contentType);
 
             
 /*            if (validForViewing(contentType))
@@ -112,24 +125,25 @@ namespace CSCI_3600_Group_Project.Controllers
         [Authorize]
         [HttpGet]
         [Route("Home/Delete")]
-        public HttpResponseMessage DeleteFile(string fileDir)
+        public HttpResponseMessage DeleteFile(string fileName)
         {
-            string filepath = Path.Combine(Directory.GetCurrentDirectory(),
-                                     "files", this.User.Identity.Name, fileDir);
-            FileInfo file = new FileInfo(filepath);
-            file.Delete();
+            //string filepath = Path.Combine(Directory.GetCurrentDirectory(), "bukit", "files", this.User.Identity.Name, fileDir);
+            var file = _fileProvider.GetFileInfo($"/bukit/files/{this.User.Identity.Name}/{fileName}").PhysicalPath;
+            var fileInfo = new System.IO.FileInfo(file);
+
+            fileInfo.Delete();
+
             var response = new HttpResponseMessage(System.Net.HttpStatusCode.OK);
             response.Content = new StringContent("File sucessfully deleted");
             return response;
         }
 
         [HttpPost("Home/Upload")]
-        public async Task<IActionResult> Upload(string fileDir, List<IFormFile> files)
+        public async Task<IActionResult> Upload(string fileName, List<IFormFile> files)
         {
             long size = files.Sum(f => f.Length);
 
-            string incompletePath = Path.Combine(Directory.GetCurrentDirectory(),
-                                    "files", this.User.Identity.Name);
+            string incompletePath = _fileProvider.GetFileInfo($"/bukit/files/{this.User.Identity.Name}/{fileName}").PhysicalPath;
 
             foreach (var formFile in files)
             {

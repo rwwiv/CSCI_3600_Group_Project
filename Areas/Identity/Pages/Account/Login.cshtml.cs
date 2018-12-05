@@ -82,7 +82,7 @@ namespace CSCI_3600_Group_Project.Areas.Identity.Pages.Account
             if (ModelState.IsValid)
             {
                 string rootPath = _hostingEnvironment.ContentRootPath;
-                string path = $"{rootPath}/files/{Input.Email}";
+                string path = $"{rootPath}/bukit/files/{Input.Email}";
                 
                 // This doesn't count login failures towards account lockout
                 // To enable password failures to trigger account lockout, set lockoutOnFailure: true
@@ -92,11 +92,11 @@ namespace CSCI_3600_Group_Project.Areas.Identity.Pages.Account
                     if (!Directory.Exists(path))
                     {
                         Directory.CreateDirectory(path);
-                        using (FileStream fs = System.IO.File.Create(path + "/.gitignore"))
-                        {
-                            byte[] ignoreString = new UTF8Encoding(true).GetBytes("*");
-                            fs.Write(ignoreString, 0, ignoreString.Length);
-                        }
+                        //using (FileStream fs = System.IO.File.Create(path + "/.gitignore"))
+                        //{
+                        //    byte[] ignoreString = new UTF8Encoding(true).GetBytes("*");
+                        //    fs.Write(ignoreString, 0, ignoreString.Length);
+                        //}
                     }
                     _logger.LogInformation("User logged in.");
                     return LocalRedirect(returnUrl);

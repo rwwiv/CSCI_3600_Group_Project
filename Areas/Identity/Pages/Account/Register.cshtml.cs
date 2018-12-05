@@ -76,7 +76,7 @@ namespace CSCI_3600_Group_Project.Areas.Identity.Pages.Account
             if (ModelState.IsValid)
             {
                 string rootPath = _hostingEnvironment.ContentRootPath;
-                string path = $"{rootPath}/files/{Input.Email}";
+                string path = $"{rootPath}/bukit/files/{Input.Email}";
 
                 var user = new IdentityUser { UserName = Input.Email, Email = Input.Email };
                 var result = await _userManager.CreateAsync(user, Input.Password);
@@ -97,11 +97,11 @@ namespace CSCI_3600_Group_Project.Areas.Identity.Pages.Account
                     await _signInManager.SignInAsync(user, isPersistent: false);
 
                     Directory.CreateDirectory(path);
-                    using (FileStream fs = System.IO.File.Create(path + "/.gitignore"))
-                    {
-                        byte[] ignoreString = new UTF8Encoding(true).GetBytes("*");
-                        fs.Write(ignoreString, 0, ignoreString.Length);
-                    }
+                    //using (FileStream fs = System.IO.File.Create(path + "/.gitignore"))
+                    //{
+                    //    byte[] ignoreString = new UTF8Encoding(true).GetBytes("*");
+                    //    fs.Write(ignoreString, 0, ignoreString.Length);
+                    //}
                     
                     return LocalRedirect(returnUrl);
                 }
