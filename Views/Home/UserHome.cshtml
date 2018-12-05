@@ -6,7 +6,7 @@
 <div class="container">
     <div class="row align-items-center justify-content-end" style="margin-top: 1rem">
         <div class="col-xs-4 flex-row justify-content-end">
-            <form method="post" enctype="multipart/form-data" asp-controller="Home" asp-action="Upload">
+            <form method="post" class="inputform" enctype="multipart/form-data" asp-controller="Home" asp-action="Upload">
                 <div class="input-group">
                     <div class="custom-file">
                         <input type="file" name ="files"class="custom-file-input" id="inputGroupFile01" multiple>
@@ -72,7 +72,14 @@
     </script>*@
     <script type="text/javascript">
         $('#inputGroupFile01').on('change', function () {
-            console.log($(this));
+            var maxfsize = 100000000;
+            for (let i = 0; i < $(this)[0].files.length; i++) {
+                if ($(this)[0].files[i].size > maxfsize) {
+                    $(this).next('.custom-file-label').html("File Size Limit Hit. Try Again");
+                    $(".inputform").get(0).reset();
+                    return;
+                }
+            }
             if ($(this)[0].files.length > 1) {
                 $(this).next('.custom-file-label').html($(this)[0].files.length + " files selected.");
             }
