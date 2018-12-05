@@ -1,5 +1,8 @@
 @model FileModel
-@{var address = "/Home/download/?fileDir=" + Model.Owner + "/" + Model.Name + "&fileName=" + Model.Name;}
+@{
+    string modelName = Model.Name.Replace(" ", "%20");
+    var address = "/Home/download/?fileName=" + modelName;
+}
 <div class="card clickable-file" data-href=@address>
     <div id="card-img">
         <img class="card-img"
