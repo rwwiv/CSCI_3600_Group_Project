@@ -22,13 +22,13 @@
     </div>
     <hr />
     <div class="row">
-        @for (var i = 0; i < Math.Min(5, Model.Count); i++)
+        @for (var i = 0; i < Math.Min(4, Model.Count); i++)
         {
             <div class="col card-column">
-                <partial name="_QuickAccessCard" model="@Model[i]" />
+                <partial name="_QuickAccessCardPartial" model="@Model[i]" />
             </div>
         }
-        @for (var i = 0; i < (5 - Model.Count); i++)
+        @for (var i = 0; i < (4 - Model.Count); i++)
         {
             <div class="col card-column"></div>
         }
@@ -47,7 +47,7 @@
             <tbody>
                 @foreach (FileModel fm in Model)
                 {
-                    <partial name="_FileListItem" model="@fm" />
+                    <partial name="_FileListItemPartial" model="@fm" />
                 }
             </tbody>
         </table>

@@ -67,9 +67,9 @@ namespace CSCI_3600_Group_Project.Models
             get => _displayName;
             set
             {
-                if (value.Length > 20)
+                if (value.Length > 12)
                 {
-                    _displayName = value.Substring(0, 20)+"...";
+                    _displayName = value.Substring(0, 12)+"...";
                 }
                 else
                 {

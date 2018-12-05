@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Builder;
@@ -12,6 +13,7 @@ using Microsoft.EntityFrameworkCore;
 using CSCI_3600_Group_Project.Data;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.FileProviders;
 
 namespace CSCI_3600_Group_Project
 {
@@ -33,6 +35,10 @@ namespace CSCI_3600_Group_Project
                 options.CheckConsentNeeded = context => true;
                 options.MinimumSameSitePolicy = SameSiteMode.None;
             });
+            IFileProvider physicalProvider = new PhysicalFileProvider(Directory.GetCurrentDirectory());  
+
+            services.AddSingleton<IFileProvider>(physicalProvider);  
+
 
             services.AddDbContext<ApplicationDbContext>(options =>
                 options.UseSqlite(

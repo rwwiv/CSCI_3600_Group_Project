@@ -13,14 +13,18 @@ using CSCI_3600_Group_Project.Models;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Server.Kestrel.Core;
 using Microsoft.AspNetCore.Http;
+using Microsoft.Extensions.FileProviders;
 
 namespace CSCI_3600_Group_Project.Controllers
 {
     public class HomeController : Controller
     {
-        public HomeController()
-        {
-        }
+        private readonly IFileProvider _fileProvider;  
+
+        public HomeController(IFileProvider fileProvider)  
+        {  
+            _fileProvider = fileProvider;  
+        }  
         public IActionResult Index()
         {
             return View();
@@ -57,7 +61,7 @@ namespace CSCI_3600_Group_Project.Controllers
         }
 
         [HttpGet]
-        [Route("Home/download")]
+        [Route("Home/Download")]
         public ActionResult DownloadFile(string fileName)
         {
             string filepath = Path.Combine(Directory.GetCurrentDirectory(),
@@ -75,35 +79,39 @@ namespace CSCI_3600_Group_Project.Controllers
             return File(filedata, contentType);
         }
         [HttpGet]
-        [Route("Home/view")]
+        [Route("Home/View")]
         public ActionResult ViewFile(string fileName)
         {
             string filepath = Path.Combine(Directory.GetCurrentDirectory(),
                                     "files", this.User.Identity.Name, fileName);
-            byte[] filedata = System.IO.File.ReadAllBytes(filepath);
+            IFileInfo file = _fileProvider.GetFileInfo($"/files/{this.User.Identity.Name}/{fileName}");
+
             string contentType = Type(filepath);
 
             var cd = new System.Net.Mime.ContentDisposition
             {
                 FileName = fileName,
-                Inline = false,
+                Inline = true,
             };
             Response.Headers.Add("Content-Disposition", cd.ToString());
 
-            if (validForViewing(contentType))
+            return File(file.CreateReadStream(), contentType);
+
+            
+/*            if (validForViewing(contentType))
             {
-                return File(filedata, contentType);
+                return File(file.CreateReadStream(), contentType, file.Name);
             }
 
             else
             {
                 UnviewableFileModel FileUnviewable = new UnviewableFileModel();
                 return View(FileUnviewable);
-            }
+            }*/
         }
         [Authorize]
         [HttpGet]
-        [Route("Home/delete")]
+        [Route("Home/Delete")]
         public HttpResponseMessage DeleteFile(string fileDir)
         {
             string filepath = Path.Combine(Directory.GetCurrentDirectory(),
