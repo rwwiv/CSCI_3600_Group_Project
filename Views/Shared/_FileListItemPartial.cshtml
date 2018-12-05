@@ -1,6 +1,14 @@
 @model FileModel
 @{
-    var fileSize = Model.Size / 1024;
+    string[] sizes = {"KB","KB", "MB", "GB"};
+    int pos = 0;
+    double fileSize = Model.Size;
+    while (fileSize > (1024 * pos))
+    {
+        fileSize = fileSize / 1024;
+        pos++;
+    }
+    fileSize = Math.Ceiling(fileSize);
     string modelName = Model.Name.Replace(" ", "%20");
     var address = "/Home/download/?fileName=" + modelName;
 }
@@ -12,7 +20,7 @@
     </td>
     <td class="file-text">@Model.Owner</td>
     <td class="file-text">@Model.LastModified</td>
-    <td class="file-text">@fileSize KB</td>
+    <td class="file-text">@fileSize @sizes[pos]</td>
     <td>
         @* <button class="btn btn-secondary view" onclick="viewLoad('@Model.Name')">View</button> *@
         <a class="btn btn-secondary" asp-controller="Home" asp-action="ViewFile" asp-route-fileName="@Model.Name">View</a>
